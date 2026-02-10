@@ -192,8 +192,8 @@ export const cvText = {
             en: "Creative Coefficient",
           },
           body: {
-            es: "Nuestro equipo entrega soluciones web end-to-end, incluyendo un proyecto empresarial con módulos backend y frontend, desarrollo funcionalidades con Java + Spring Boot, React + TypeScript, SQL Server/MySQL y Docker, en equipos colaborativos aplico Agile (Scrum, Planning Poker), con foco en comunicación efectiva, autogestión y resolución de problemas",
-            en: "Our team delivers end-to-end web solutions, including an enterprise project spanning backend and frontend modules, I build features with Java + Spring Boot, React + TypeScript, SQL Server/MySQL, and Docker, in collaborative teams, I apply Agile practices (Scrum, Planning Poker), with strong communication, self-management, and problem-solving",
+            es: "Nuestro equipo entrega soluciones web end-to-end, incluyendo un proyecto empresarial con módulos backend y frontend. Desarrollo funcionalidades con Java + Spring Boot, React + TypeScript, SQL Server/MySQL y Docker. En equipos colaborativos, aplico Agile (Scrum, Planning Poker), con foco en comunicación efectiva, autogestión y resolución de problemas",
+            en: "Our team delivers end-to-end web solutions, including an enterprise project spanning backend and frontend modules. I build features with Java + Spring Boot, React + TypeScript, SQL Server/MySQL, and Docker. In collaborative teams, I apply Agile practices (Scrum, Planning Poker), with strong communication, self-management, and problem-solving",
           },
           href: "https://creativecoefficient.net",
         },
@@ -211,8 +211,8 @@ export const cvText = {
             en: "Health & Harmony Insure",
           },
           body: {
-            es: "Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, EEUU, implementé herramientas internas de automatización y generación de contenido, realicé configuración administrativa de CRM (Salesforce) y desarrollé el sitio bilingüe de la agencia: hnhinsure.com",
-            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA, I implemented internal automation and content-generation tools, configured Salesforce CRM administration, and developed the agency’s bilingual website: hnhinsure.com",
+            es: "Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, EEUU. Implementé herramientas internas de automatización y generación de contenido, realicé configuración administrativa de CRM (Salesforce) y desarrollé el sitio bilingüe de la agencia: hnhinsure.com",
+            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA. I implemented internal automation and content-generation tools, configured Salesforce CRM administration, and developed the agency’s bilingual website: hnhinsure.com",
           },
           href: "https://hnhinsure.com",
         },

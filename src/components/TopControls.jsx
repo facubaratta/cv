@@ -3,8 +3,8 @@ function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }
     <div className="top-controls">
       <p className="interactive-note">
         <span aria-hidden="true">🔗 </span>
-        <span className="lang-en">Sections are links</span>
-        <span className="lang-es">Las secciones son enlaces</span>
+        <span className="lang-en">Entries are links</span>
+        <span className="lang-es">Las entradas son enlaces</span>
       </p>
       <div className="top-controls-actions">
         <button

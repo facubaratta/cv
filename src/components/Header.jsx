@@ -1,35 +1,29 @@
-const LinkedInLink = (children) => (
-  <a
-    href="https://www.linkedin.com/in/facundo-baratta/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {children}
-  </a>
-);
+import Anchor from "./common/Anchor";
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/facundo-baratta/";
 
 function Header() {
   return (
     <header>
       <h1>
-        {LinkedInLink("FACUNDO BARATTA")}
+        <Anchor href={LINKEDIN_URL}>
+          FACUNDO BARATTA
+        </Anchor>
       </h1>
       <p className="contact">
-        <a href="mailto:facundo.baratta@gmail.com">facundo.baratta@gmail.com</a>
+        <Anchor href="mailto:facundo.baratta@gmail.com">facundo.baratta@gmail.com</Anchor>
         <span className="contact-separator" aria-hidden="true">
           |
         </span>
-        <a
-          href="https://wa.me/5491133610131"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Anchor href="https://wa.me/5491133610131">
           (+54 9) 11 3361-0131
-        </a>
+        </Anchor>
         <span className="contact-separator" aria-hidden="true">
           |
         </span>
-        {LinkedInLink("in/facundo-baratta")}
+        <Anchor href={LINKEDIN_URL}>
+          in/facundo-baratta
+        </Anchor>
       </p>
     </header>
   );

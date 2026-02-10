@@ -3,8 +3,8 @@ function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }
     <div className="top-controls">
       <p className="interactive-note">
         <span aria-hidden="true">🔗 </span>
-        <span data-lang="en">Sections are links</span>
-        <span data-lang="es">Las secciones son enlaces</span>
+        <span className="lang-en">Sections are links</span>
+        <span className="lang-es">Las secciones son enlaces</span>
       </p>
       <div className="top-controls-actions">
         <button
@@ -28,7 +28,6 @@ function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }
           aria-label={
             isSpanish ? "Switch language to English" : "Cambiar idioma a español"
           }
-          aria-pressed={!isSpanish}
           onClick={onToggleLanguage}
           disabled={isExporting}
         >

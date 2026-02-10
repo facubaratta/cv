@@ -1,12 +1,6 @@
 import SectionTitle from "../common/SectionTitle";
 import Entry from "../common/Entry";
 
-const Link = ({ href, children }) => (
-  <a href={href} target="_blank" rel="noreferrer">
-    {children}
-  </a>
-);
-
 function ExperienceSection() {
   return (
     <section className="experience">
@@ -50,10 +44,18 @@ function ExperienceSection() {
         subtitleEs="Health & Harmony Insure"
         subtitleEn="Health & Harmony Insure"
         bodyEs={
-          <>Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, USA. Desarrollado por mí:{" "}<Link href="https://hnhinsure.com">hnhinsure.com</Link></>
+          <>
+            Consultor privado de soluciones digitales e IT para una agencia de
+            seguros de salud en Maryland, USA. Desarrollado por mí:{" "}
+            <span className="inline-link-like">hnhinsure.com</span>
+          </>
         }
         bodyEn={
-          <>Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA. Built by me:{" "}<Link href="https://hnhinsure.com">hnhinsure.com</Link></>
+          <>
+            Private consultant for digital and IT solutions for a health insurance
+            agency in Maryland, USA. Built by me:{" "}
+            <span className="inline-link-like">hnhinsure.com</span>
+          </>
         }
       />
 
@@ -78,10 +80,16 @@ function ExperienceSection() {
         subtitleEs="Finca Don Clemente"
         subtitleEn="Finca Don Clemente"
         bodyEs={
-          <>Desarrollado por mí{" "}<Link href="https://fincadonclemente.com">fincadonclemente.com</Link></>
+          <>
+            Desarrollado por mí:{" "}
+            <span className="inline-link-like">fincadonclemente.com</span>
+          </>
         }
         bodyEn={
-          <>Built by me:{" "}<Link href="https://fincadonclemente.com">fincadonclemente.com</Link></>
+          <>
+            Built by me:{" "}
+            <span className="inline-link-like">fincadonclemente.com</span>
+          </>
         }
       />
     </section>

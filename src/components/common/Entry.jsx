@@ -1,5 +1,6 @@
 import BilingualText from "./BilingualText";
 import EntryHeader from "./EntryHeader";
+import Anchor from "./Anchor";
 
 function Entry({
   leftEs,
@@ -10,7 +11,6 @@ function Entry({
   subtitleEn,
   bodyEs,
   bodyEn,
-  entryLang,
   href,
 }) {
   const content = (
@@ -33,11 +33,11 @@ function Entry({
   );
 
   return (
-    <p className="entry" data-lang={entryLang}>
+    <p className="entry">
       {href ? (
-        <a className="entry-link" href={href} target="_blank" rel="noopener noreferrer">
+        <Anchor href={href}>
           {content}
-        </a>
+        </Anchor>
       ) : (
         <span className="entry-content">{content}</span>
       )}

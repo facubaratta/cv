@@ -51,7 +51,7 @@ function EducationSection() {
         rightEn="2024"
         subtitleEs="Mini-Curso: Visual Studio Code"
         subtitleEn="Mini-Course: Visual Studio Code"
-        bodyEs="Atajos y edicion rapida."
+        bodyEs="Atajos y edición rápida."
         bodyEn="Shortcuts and faster editing."
         href="https://fernando-herrera.com/course/curso-vscode/"
       />

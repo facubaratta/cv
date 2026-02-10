@@ -112,6 +112,10 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+.anchor {
+  color: #000;
+}
+
 .section-title {
   margin: 1.35em 0 1.1em 0;
   font-size: 1.2em;
@@ -125,7 +129,7 @@ button:focus-visible {
   margin: 0;
 }
 
-.entry-link {
+.entry > .anchor {
   display: inline-block;
   width: 100%;
   color: inherit;
@@ -142,12 +146,17 @@ button:focus-visible {
   padding: 3px 6px;
 }
 
-.entry-link .left {
+.entry > .anchor .left {
   text-decoration: none;
 }
 
-.entry-link:hover,
-.entry-link:focus-visible {
+.inline-link-like {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.entry > .anchor:hover,
+.entry > .anchor:focus-visible {
   background: #f7f7f7;
 }
 
@@ -209,36 +218,12 @@ button:focus-visible {
 
 /* Lang controls */
 
-[data-lang="en"] {
-  display: none;
+html[lang="en"] .lang-es {
+  display: none !important;
 }
 
-html[lang="en"] [data-lang="es"] {
-  display: none;
-}
-
-html[lang="en"] [data-lang="en"] {
-  display: inline;
-}
-
-html[lang="en"] .languages[data-lang="en"] {
-  display: flex;
-}
-
-html[lang="en"] .entry-header[data-lang="en"] {
-  display: flex;
-}
-
-html[lang="es"] [data-lang="es"] {
-  display: inline;
-}
-
-html[lang="es"] .languages[data-lang="es"] {
-  display: flex;
-}
-
-html[lang="es"] .entry-header[data-lang="es"] {
-  display: flex;
+html[lang="es"] .lang-en {
+  display: none !important;
 }
 
 /* Responsive and print styles */

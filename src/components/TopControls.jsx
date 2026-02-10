@@ -2,6 +2,15 @@ import { cvText } from "../config/cvText";
 
 function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }) {
   const { controls } = cvText;
+  const downloadLabel = isSpanish ? controls.downloadPdf.es : controls.downloadPdf.en;
+  const generatingLabel = isSpanish
+    ? controls.generatingPdf.es
+    : controls.generatingPdf.en;
+  const currentDownloadLabel = isExporting ? generatingLabel : downloadLabel;
+  const switchLanguageAriaLabel = isSpanish
+    ? controls.switchLanguageAria.fromEsToEn
+    : controls.switchLanguageAria.fromEnToEs;
+  const toggleLabel = isSpanish ? controls.languageToggle.en : controls.languageToggle.es;
 
   return (
     <div className="top-controls">
@@ -14,30 +23,20 @@ function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }
         <button
           className="pdf-btn"
           type="button"
-          aria-label={isSpanish ? controls.downloadPdf.es : controls.downloadPdf.en}
+          aria-label={downloadLabel}
           onClick={onDownloadPdf}
           disabled={isExporting}
         >
-          {isExporting
-            ? isSpanish
-              ? controls.generatingPdf.es
-              : controls.generatingPdf.en
-            : isSpanish
-              ? controls.downloadPdf.es
-              : controls.downloadPdf.en}
+          {currentDownloadLabel}
         </button>
         <button
           className="lang-toggle"
           type="button"
-          aria-label={
-            isSpanish
-              ? controls.switchLanguageAria.fromEsToEn
-              : controls.switchLanguageAria.fromEnToEs
-          }
+          aria-label={switchLanguageAriaLabel}
           onClick={onToggleLanguage}
           disabled={isExporting}
         >
-          {isSpanish ? controls.languageToggle.en : controls.languageToggle.es}
+          {toggleLabel}
         </button>
       </div>
     </div>

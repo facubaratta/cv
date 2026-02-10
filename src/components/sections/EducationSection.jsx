@@ -9,9 +9,9 @@ function EducationSection() {
     <section className="experience">
       <SectionTitle es={education.title.es} en={education.title.en} />
 
-      {education.entries.map((entry) => (
+      {education.entries.map((entry, index) => (
         <Entry
-          key={`${entry.left.en}-${entry.right.en}`}
+          key={`${entry.left.en}-${entry.right.en}-${entry.subtitle.en}-${entry.href ?? index}`}
           leftEs={entry.left.es}
           rightEs={entry.right.es}
           leftEn={entry.left.en}

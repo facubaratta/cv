@@ -286,6 +286,7 @@ html[lang="es"] .lang-en {
     flex-direction: column;
     flex-wrap: nowrap;
     word-break: break-word;
+    gap: 3px;
   }
 
   html:not([data-pdf-export="true"]) .contact-separator {

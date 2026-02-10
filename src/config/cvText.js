@@ -27,8 +27,8 @@ export const cvText = {
       es: "Descargar PDF",
     },
     generatingPdf: {
-      en: "Generating PDF",
-      es: "Generando PDF",
+      en: "Generating PDF…",
+      es: "Generando PDF…",
     },
     switchLanguageAria: {
       fromEsToEn: "Switch language to English",

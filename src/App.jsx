@@ -5,7 +5,7 @@ import EducationSection from "./components/sections/EducationSection";
 import SkillsSection from "./components/sections/SkillsSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
 import LanguagesSection from "./components/sections/LanguagesSection";
-import { exportCvToPdf } from "./utils/pdfExport";
+import { exportCvToPdf } from "./config/pdfExport";
 import { cvText } from "./config/cvText";
 
 function App() {

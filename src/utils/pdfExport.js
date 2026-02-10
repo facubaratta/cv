@@ -18,12 +18,19 @@ const jsPDFOptions = {
 const A4_WIDTH_MM = 210;
 const A4_HEIGHT_MM = 297;
 const PDF_VIEWPORT_WIDTH = 1200;
+const PDF_EXPORT_ATTR = "data-pdf-export";
 const PAGE_MARGINS_MM = {
   top: 10,
   right: 10,
   bottom: 0,
   left: 10,
 };
+
+function waitForNextFrame() {
+  return new Promise((resolve) => {
+    requestAnimationFrame(() => resolve());
+  });
+}
 
 function getImagePlacementInPage(canvas) {
   const contentWidth =
@@ -74,34 +81,47 @@ function getPdfLinkAnnotations({ element, imagePlacement }) {
 export async function exportCvToPdf({ element, title }) {
   if (!element) return;
 
+  const root = document.documentElement;
+  const previousAttr = root.getAttribute(PDF_EXPORT_ATTR);
+  root.setAttribute(PDF_EXPORT_ATTR, "true");
+  await waitForNextFrame();
+
   const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
     import("html2canvas"),
     import("jspdf"),
   ]);
 
-  const canvas = await html2canvas(element, html2canvasOptions(element));
+  try {
+    const canvas = await html2canvas(element, html2canvasOptions(element));
 
-  const pdf = new jsPDF(jsPDFOptions);
-  const { x, y, width, height } = getImagePlacementInPage(canvas);
-  const links = getPdfLinkAnnotations({
-    element,
-    imagePlacement: { x, y, width, height },
-  });
+    const pdf = new jsPDF(jsPDFOptions);
+    const { x, y, width, height } = getImagePlacementInPage(canvas);
+    const links = getPdfLinkAnnotations({
+      element,
+      imagePlacement: { x, y, width, height },
+    });
 
-  pdf.addImage(
-    canvas.toDataURL("image/png"),
-    "PNG",
-    x,
-    y,
-    width,
-    height,
-    undefined,
-    "FAST",
-  );
+    pdf.addImage(
+      canvas.toDataURL("image/png"),
+      "PNG",
+      x,
+      y,
+      width,
+      height,
+      undefined,
+      "FAST",
+    );
 
-  links.forEach(({ x: linkX, y: linkY, width: linkWidth, height: linkHeight, href }) => {
-    pdf.link(linkX, linkY, linkWidth, linkHeight, { url: href });
-  });
+    links.forEach(({ x: linkX, y: linkY, width: linkWidth, height: linkHeight, href }) => {
+      pdf.link(linkX, linkY, linkWidth, linkHeight, { url: href });
+    });
 
-  pdf.save(title);
+    pdf.save(title);
+  } finally {
+    if (previousAttr === null) {
+      root.removeAttribute(PDF_EXPORT_ATTR);
+    } else {
+      root.setAttribute(PDF_EXPORT_ATTR, previousAttr);
+    }
+  }
 }

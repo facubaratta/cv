@@ -1,17 +1,14 @@
 function BilingualText({ as: Component = "span", className, es, en }) {
-  const esClass = className ? `${className} lang-es` : "lang-es";
-  const enClass = className ? `${className} lang-en` : "lang-en";
+  const getClassName = (lang) => [className, `lang-${lang}`].filter(Boolean).join(" ");
 
   return (
     <>
-      <Component className={esClass}>
+      <Component className={getClassName("es")}>
         {es}
       </Component>
-      {en !== undefined ? (
-        <Component className={enClass}>
-          {en}
-        </Component>
-      ) : null}
+      <Component className={getClassName("en")}>
+        {en}
+      </Component>
     </>
   );
 }

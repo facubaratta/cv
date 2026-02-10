@@ -10,12 +10,10 @@ function EntryHeader({
         <span className="left">{leftEs}</span>
         <span className="right">{rightEs}</span>
       </span>
-      {leftEn !== undefined && rightEn !== undefined ? (
-        <span className="entry-header lang-en">
-          <span className="left">{leftEn}</span>
-          <span className="right">{rightEn}</span>
-        </span>
-      ) : null}
+      <span className="entry-header lang-en">
+        <span className="left">{leftEn}</span>
+        <span className="right">{rightEn}</span>
+      </span>
     </>
   );
 }

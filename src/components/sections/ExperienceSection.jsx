@@ -1,6 +1,12 @@
 import SectionTitle from "../common/SectionTitle";
 import Entry from "../common/Entry";
 
+const Link = ({ href, children }) => (
+  <a href={href} target="_blank" rel="noreferrer">
+    {children}
+  </a>
+);
+
 function ExperienceSection() {
   return (
     <section className="experience">
@@ -43,8 +49,12 @@ function ExperienceSection() {
         href="https://hnhinsure.com"
         subtitleEs="Health & Harmony Insure"
         subtitleEn="Health & Harmony Insure"
-        bodyEs="Consultor privado de soluciones IT y digitales para una agencia de seguros de salud en Maryland, EE.UU. Desarrollado por mí: hnhinsure.com"
-        bodyEn="Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA. Built by me: hnhinsure.com"
+        bodyEs={
+          <>Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, USA. Desarrollado por mí:{" "}<Link href="https://hnhinsure.com">hnhinsure.com</Link></>
+        }
+        bodyEn={
+          <>Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA. Built by me:{" "}<Link href="https://hnhinsure.com">hnhinsure.com</Link></>
+        }
       />
 
       <Entry
@@ -67,8 +77,12 @@ function ExperienceSection() {
         href="https://fincadonclemente.com"
         subtitleEs="Finca Don Clemente"
         subtitleEn="Finca Don Clemente"
-        bodyEs="Desarrollado por mí: fincadonclemente.com"
-        bodyEn="Built by me: fincadonclemente.com"
+        bodyEs={
+          <>Desarrollado por mí{" "}<Link href="https://fincadonclemente.com">fincadonclemente.com</Link></>
+        }
+        bodyEn={
+          <>Built by me:{" "}<Link href="https://fincadonclemente.com">fincadonclemente.com</Link></>
+        }
       />
     </section>
   );

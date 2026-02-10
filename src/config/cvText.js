@@ -27,8 +27,8 @@ export const cvText = {
       es: "Descargar PDF",
     },
     generatingPdf: {
-      en: "Generating PDF...",
-      es: "Generando PDF...",
+      en: "Generating PDF",
+      es: "Generando PDF",
     },
     switchLanguageAria: {
       fromEsToEn: "Switch language to English",
@@ -60,8 +60,8 @@ export const cvText = {
             en: "Faculty of Engineering",
           },
           body: {
-            es: "Ingeniería Informática, graduado en diciembre de 2025.",
-            en: 'Computer Engineering ("Ingeniería Informática", CS-equivalent curriculum), graduated December 2025.',
+            es: "Ingeniería Informática, graduado en diciembre de 2025",
+            en: 'Computer Engineering ("Ingeniería Informática", CS-equivalent curriculum), graduated December 2025',
           },
           href: "https://www.fi.uba.ar/grado/carreras/ingenieria-en-informatica",
         },
@@ -79,8 +79,8 @@ export const cvText = {
             en: "React - The Complete Guide (incl. Next.js, Redux)",
           },
           body: {
-            es: "React, Next.js, Redux y testing.",
-            en: "React, Next.js, Redux, and testing.",
+            es: "React, Next.js, Redux y testing",
+            en: "React, Next.js, Redux, and testing",
           },
           href: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/",
         },
@@ -98,8 +98,8 @@ export const cvText = {
             en: "React Native Expo: Native Apps for iOS and Android",
           },
           body: {
-            es: "TypeScript, Expo Router, JWT y despliegue en stores.",
-            en: "TypeScript, Expo Router, JWT, and store deployment.",
+            es: "TypeScript, Expo Router, JWT y despliegue en stores",
+            en: "TypeScript, Expo Router, JWT, and store deployment",
           },
           href: "https://fernando-herrera.com/course/react-native-expo/",
         },
@@ -117,8 +117,8 @@ export const cvText = {
             en: "Mini-Course: Visual Studio Code",
           },
           body: {
-            es: "Atajos y edición rápida.",
-            en: "Shortcuts and faster editing.",
+            es: "Atajos y edición rápida",
+            en: "Shortcuts and faster editing",
           },
           href: "https://fernando-herrera.com/course/curso-vscode/",
         },
@@ -136,8 +136,8 @@ export const cvText = {
             en: "Software Engineering",
           },
           value: {
-            es: "Principios de diseño, POO, estructuras de datos, control de versiones (Git), arquitectura modular (Docker), pipelines CI/CD.",
-            en: "Design principles, OOP, data structures, version control (Git), modular architecture (Docker), CI/CD pipelines.",
+            es: "Principios de diseño, POO, estructuras de datos, control de versiones (Git), arquitectura modular (Docker), pipelines CI/CD",
+            en: "Design principles, OOP, data structures, version control (Git), modular architecture (Docker), CI/CD pipelines",
           },
         },
         {
@@ -156,8 +156,8 @@ export const cvText = {
             en: "Frontend",
           },
           value: {
-            es: "React, TypeScript, JavaScript, HTML, CSS, Material UI.",
-            en: "React, TypeScript, JavaScript, HTML, CSS, Material UI.",
+            es: "React, TypeScript, JavaScript, HTML, CSS, Material UI",
+            en: "React, TypeScript, JavaScript, HTML, CSS, Material UI",
           },
         },
         {
@@ -166,8 +166,8 @@ export const cvText = {
             en: "Low-level programming",
           },
           value: {
-            es: "C, Assembly, sistemas operativos.",
-            en: "C, Assembly, operating systems.",
+            es: "C, Assembly, sistemas operativos",
+            en: "C, Assembly, operating systems",
           },
         },
       ],
@@ -192,8 +192,8 @@ export const cvText = {
             en: "Creative Coefficient",
           },
           body: {
-            es: "Nuestro equipo entrega soluciones web end-to-end, incluyendo un proyecto empresarial con módulos backend y frontend. Desarrollo funcionalidades con Java + Spring Boot, React + TypeScript, SQL Server/MySQL y Docker. En equipos colaborativos aplico Agile (Scrum, Planning Poker), con foco en comunicación efectiva, autogestión y resolución de problemas.",
-            en: "Our team delivers end-to-end web solutions, including an enterprise project spanning backend and frontend modules. I build features with Java + Spring Boot, React + TypeScript, SQL Server/MySQL, and Docker. In collaborative teams, I apply Agile practices (Scrum, Planning Poker), with strong communication, self-management, and problem-solving.",
+            es: "Nuestro equipo entrega soluciones web end-to-end, incluyendo un proyecto empresarial con módulos backend y frontend, desarrollo funcionalidades con Java + Spring Boot, React + TypeScript, SQL Server/MySQL y Docker, en equipos colaborativos aplico Agile (Scrum, Planning Poker), con foco en comunicación efectiva, autogestión y resolución de problemas",
+            en: "Our team delivers end-to-end web solutions, including an enterprise project spanning backend and frontend modules, I build features with Java + Spring Boot, React + TypeScript, SQL Server/MySQL, and Docker, in collaborative teams, I apply Agile practices (Scrum, Planning Poker), with strong communication, self-management, and problem-solving",
           },
           href: "https://creativecoefficient.net",
         },
@@ -211,8 +211,8 @@ export const cvText = {
             en: "Health & Harmony Insure",
           },
           body: {
-            es: "Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, EE. UU. Implementé herramientas internas de automatización y generación de contenido, realicé configuración administrativa de CRM (Salesforce) y desarrollé el sitio bilingüe de la agencia: hnhinsure.com",
-            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA. I implemented internal automation and content-generation tools, configured Salesforce CRM administration, and developed the agency's bilingual website: hnhinsure.com",
+            es: "Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, EEUU, implementé herramientas internas de automatización y generación de contenido, realicé configuración administrativa de CRM (Salesforce) y desarrollé el sitio bilingüe de la agencia: hnhinsure.com",
+            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA, I implemented internal automation and content-generation tools, configured Salesforce CRM administration, and developed the agency's bilingual website: hnhinsure.com",
           },
           href: "https://hnhinsure.com",
         },
@@ -230,8 +230,8 @@ export const cvText = {
             en: "Algorithms and Programming",
           },
           body: {
-            es: "Dicté clases prácticas y corregí trabajos en la materia de programación de Electrónica, con foco en C.",
-            en: "I taught lab sessions and graded coursework in the Electronics programming course, with a focus on C.",
+            es: "Dicté clases prácticas y corregí trabajos en la materia de programación de Electrónica, con foco en C",
+            en: "I taught lab sessions and graded coursework in the Electronics programming course, with a focus on C",
           },
           href: "https://algoritmos9511.gitlab.io/index.html",
         },

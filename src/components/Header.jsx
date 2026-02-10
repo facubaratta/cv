@@ -1,29 +1,24 @@
 import Anchor from "./common/Anchor";
+import { cvText } from "../config/cvText";
 
-const LINKEDIN_URL = "https://www.linkedin.com/in/facundo-baratta/";
+const { header } = cvText;
 
 function Header() {
   return (
     <header>
       <h1>
-        <Anchor href={LINKEDIN_URL}>
-          FACUNDO BARATTA
-        </Anchor>
+        <Anchor href={header.linkedinUrl}>{header.name}</Anchor>
       </h1>
       <p className="contact">
-        <Anchor href="mailto:facundo.baratta@gmail.com">facundo.baratta@gmail.com</Anchor>
+        <Anchor href={header.email.href}>{header.email.label}</Anchor>
         <span className="contact-separator" aria-hidden="true">
-          |
+          {header.contactSeparator}
         </span>
-        <Anchor href="https://wa.me/5491133610131">
-          (+54 9) 11 3361-0131
-        </Anchor>
+        <Anchor href={header.phone.href}>{header.phone.label}</Anchor>
         <span className="contact-separator" aria-hidden="true">
-          |
+          {header.contactSeparator}
         </span>
-        <Anchor href={LINKEDIN_URL}>
-          in/facundo-baratta
-        </Anchor>
+        <Anchor href={header.linkedinUrl}>{header.linkedinLabel}</Anchor>
       </p>
     </header>
   );

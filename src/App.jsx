@@ -6,6 +6,7 @@ import SkillsSection from "./components/sections/SkillsSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
 import LanguagesSection from "./components/sections/LanguagesSection";
 import { exportCvToPdf } from "./utils/pdfExport";
+import { cvText } from "./config/cvText";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -22,7 +23,7 @@ function App() {
     if (!pageRef.current || isExporting) return;
     setIsExporting(true);
 
-    const title = `Facundo_Baratta_CV_${lang.toUpperCase()}.pdf`;
+    const title = `${cvText.meta.pdfBaseName}_${lang.toUpperCase()}.pdf`;
     try {
       await exportCvToPdf({ element: pageRef.current, title });
     } finally {

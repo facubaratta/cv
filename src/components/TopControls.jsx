@@ -1,37 +1,43 @@
+import { cvText } from "../config/cvText";
+
 function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }) {
+  const { controls } = cvText;
+
   return (
     <div className="top-controls">
       <p className="interactive-note">
-        <span aria-hidden="true">🔗 </span>
-        <span className="lang-en">Entries are links</span>
-        <span className="lang-es">Las entradas son enlaces</span>
+        <span aria-hidden="true">{controls.linksIcon} </span>
+        <span className="lang-en">{controls.linksNote.en}</span>
+        <span className="lang-es">{controls.linksNote.es}</span>
       </p>
       <div className="top-controls-actions">
         <button
           className="pdf-btn"
           type="button"
-          aria-label={isSpanish ? "Descargar PDF" : "Download PDF"}
+          aria-label={isSpanish ? controls.downloadPdf.es : controls.downloadPdf.en}
           onClick={onDownloadPdf}
           disabled={isExporting}
         >
           {isExporting
             ? isSpanish
-              ? "Generando PDF..."
-              : "Generating PDF..."
+              ? controls.generatingPdf.es
+              : controls.generatingPdf.en
             : isSpanish
-              ? "Descargar PDF"
-              : "Download PDF"}
+              ? controls.downloadPdf.es
+              : controls.downloadPdf.en}
         </button>
         <button
           className="lang-toggle"
           type="button"
           aria-label={
-            isSpanish ? "Switch language to English" : "Cambiar idioma a español"
+            isSpanish
+              ? controls.switchLanguageAria.fromEsToEn
+              : controls.switchLanguageAria.fromEnToEs
           }
           onClick={onToggleLanguage}
           disabled={isExporting}
         >
-          {isSpanish ? "English" : "Español"}
+          {isSpanish ? controls.languageToggle.en : controls.languageToggle.es}
         </button>
       </div>
     </div>

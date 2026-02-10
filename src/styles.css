@@ -34,7 +34,7 @@ body {
   right: 18px;
   display: flex;
   justify-content: space-between;
-  align-items: first baseline;
+  align-items: baseline;
 }
 
 .interactive-note {
@@ -201,9 +201,11 @@ button:focus-visible {
 .languages {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: flex-start;
   gap: 8px;
-  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .language-item {
@@ -251,59 +253,60 @@ html[lang="es"] .lang-en {
 }
 
 @media (max-width: 900px) {
-  .page {
+  html:not([data-pdf-export="true"]) .page {
     width: 100%;
     min-height: auto;
     margin: 0;
     padding: 20px 16px;
   }
 
-  .top-controls {
+  html:not([data-pdf-export="true"]) .top-controls {
     position: static;
     width: 100%;
     gap: 8px;
+    flex-wrap: wrap;
   }
 
-  .top-controls-actions {
+  html:not([data-pdf-export="true"]) .top-controls-actions {
     justify-content: flex-end;
     margin-bottom: 12px;
   }
 }
 
 @media (max-width: 640px) {
-  body {
+  html:not([data-pdf-export="true"]) body {
     font-size: 10.5pt;
   }
 
-  h1 {
+  html:not([data-pdf-export="true"]) h1 {
     font-size: 24px;
   }
 
-  .contact {
+  html:not([data-pdf-export="true"]) .contact {
     flex-direction: column;
     flex-wrap: nowrap;
     word-break: break-word;
   }
 
-  .contact-separator {
+  html:not([data-pdf-export="true"]) .contact-separator {
     display: none;
   }
 
-  .entry-header {
+  html:not([data-pdf-export="true"]) .entry-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
   }
 
-  .entry-header .right {
+  html:not([data-pdf-export="true"]) .entry-header .right {
     white-space: normal;
   }
 
-  .languages {
+  html:not([data-pdf-export="true"]) .languages {
     gap: 16px;
   }
 
-  .skills li {
+  html:not([data-pdf-export="true"]) .skills li {
     margin-bottom: 0.3em;
   }
 }

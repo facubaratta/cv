@@ -61,7 +61,7 @@ export const cvText = {
           },
           body: {
             es: "Ingeniería Informática, graduado en diciembre de 2025",
-            en: 'Computer Engineering ("Ingeniería Informática", CS-equivalent curriculum), graduated December 2025',
+            en: "Computer Engineering (“Ingeniería Informática”, CS-equivalent curriculum), graduated December 2025",
           },
           href: "https://www.fi.uba.ar/grado/carreras/ingenieria-en-informatica",
         },
@@ -212,7 +212,7 @@ export const cvText = {
           },
           body: {
             es: "Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, EEUU, implementé herramientas internas de automatización y generación de contenido, realicé configuración administrativa de CRM (Salesforce) y desarrollé el sitio bilingüe de la agencia: hnhinsure.com",
-            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA, I implemented internal automation and content-generation tools, configured Salesforce CRM administration, and developed the agency's bilingual website: hnhinsure.com",
+            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA, I implemented internal automation and content-generation tools, configured Salesforce CRM administration, and developed the agency’s bilingual website: hnhinsure.com",
           },
           href: "https://hnhinsure.com",
         },

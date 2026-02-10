@@ -23,7 +23,7 @@ function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }
         <button
           className="pdf-btn"
           type="button"
-          aria-label={downloadLabel}
+          aria-label={currentDownloadLabel}
           onClick={onDownloadPdf}
           disabled={isExporting}
         >

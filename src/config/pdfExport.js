@@ -84,14 +84,14 @@ export async function exportCvToPdf({ element, title }) {
   const root = document.documentElement;
   const previousAttr = root.getAttribute(PDF_EXPORT_ATTR);
   root.setAttribute(PDF_EXPORT_ATTR, "true");
-  await waitForNextFrame();
-
-  const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
-    import("html2canvas"),
-    import("jspdf"),
-  ]);
-
   try {
+    await waitForNextFrame();
+
+    const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
+      import("html2canvas"),
+      import("jspdf"),
+    ]);
+
     const canvas = await html2canvas(element, html2canvasOptions(element));
 
     const pdf = new jsPDF(jsPDFOptions);

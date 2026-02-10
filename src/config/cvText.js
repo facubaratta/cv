@@ -146,7 +146,7 @@ export const cvText = {
             en: "Backend",
           },
           value: {
-            es: "Python, C++, Java, Spring Boot, APIs REST, SQL Server, MySQL",
+            es: "Python, C++, Java, Spring Boot, APIs RESTful, SQL Server, MySQL",
             en: "Python, C++, Java, Spring Boot, REST APIs, SQL Server, MySQL",
           },
         },
@@ -180,8 +180,8 @@ export const cvText = {
       entries: [
         {
           left: {
-            es: "Desarrollador Fullstack",
-            en: "Fullstack Developer",
+            es: "Desarrollador Full-Stack",
+            en: "Full-Stack Developer",
           },
           right: {
             es: "Octubre 2024 ‒ Presente",
@@ -192,8 +192,8 @@ export const cvText = {
             en: "Creative Coefficient",
           },
           body: {
-            es: "Nuestro equipo desarrolla soluciones web end-to-end, incluyendo un proyecto enterprise con módulos backend y frontend. Trabajo con Java + Spring Boot, React + TypeScript, SQL Server/MySQL, y Docker. En equipos colaborativos aplico Agile (Scrum, Planning Poker), con foco en comunicación efectiva, autogestión y resolución de problemas.",
-            en: "Our team builds end-to-end web solutions, including an enterprise project across backend and frontend modules. I work with Java + Spring Boot, React + TypeScript, SQL Server/MySQL, and Docker. In collaborative teams, I apply Agile (Scrum, Planning Poker), with strong communication, self-management, and problem-solving.",
+            es: "Nuestro equipo entrega soluciones web end-to-end, incluyendo un proyecto empresarial con módulos backend y frontend. Desarrollo funcionalidades con Java + Spring Boot, React + TypeScript, SQL Server/MySQL y Docker. En equipos colaborativos aplico Agile (Scrum, Planning Poker), con foco en comunicación efectiva, autogestión y resolución de problemas.",
+            en: "Our team delivers end-to-end web solutions, including an enterprise project spanning backend and frontend modules. I build features with Java + Spring Boot, React + TypeScript, SQL Server/MySQL, and Docker. In collaborative teams, I apply Agile practices (Scrum, Planning Poker), with strong communication, self-management, and problem-solving.",
           },
           href: "https://creativecoefficient.net",
         },
@@ -211,8 +211,8 @@ export const cvText = {
             en: "Health & Harmony Insure",
           },
           body: {
-            es: "Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, USA. Desarrollé herramientas internas de automatización y generación de contenido, realicé configuración administrativa de CRM (Salesforce) y desarrollé el siguiente sitio bilingüe: hnhinsure.com",
-            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA. I developed internal automation and content generation tools, administrative CRM configuration (Salesforce), and built the following bilingual website: hnhinsure.com",
+            es: "Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, EE. UU. Implementé herramientas internas de automatización y generación de contenido, realicé configuración administrativa de CRM (Salesforce) y desarrollé el sitio bilingüe de la agencia: hnhinsure.com",
+            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA. I implemented internal automation and content-generation tools, configured Salesforce CRM administration, and developed the agency's bilingual website: hnhinsure.com",
           },
           href: "https://hnhinsure.com",
         },

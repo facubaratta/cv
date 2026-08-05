@@ -64,6 +64,11 @@ body {
   cursor: pointer;
 }
 
+.pdf-btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
 h1 {
   margin: 0;
   text-align: center;

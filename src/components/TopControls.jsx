@@ -1,12 +1,8 @@
 import { cvText } from "../config/cvText";
 
-function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }) {
+function TopControls({ isSpanish, onToggleLanguage, pdfFileName, pdfUrl }) {
   const { controls } = cvText;
   const downloadLabel = isSpanish ? controls.downloadPdf.es : controls.downloadPdf.en;
-  const generatingLabel = isSpanish
-    ? controls.generatingPdf.es
-    : controls.generatingPdf.en;
-  const currentDownloadLabel = isExporting ? generatingLabel : downloadLabel;
   const switchLanguageAriaLabel = isSpanish
     ? controls.switchLanguageAria.fromEsToEn
     : controls.switchLanguageAria.fromEnToEs;
@@ -20,21 +16,19 @@ function TopControls({ isSpanish, onToggleLanguage, onDownloadPdf, isExporting }
         <span className="lang-es">{controls.linksNote.es}</span>
       </p>
       <div className="top-controls-actions">
-        <button
+        <a
           className="pdf-btn"
-          type="button"
-          aria-label={currentDownloadLabel}
-          onClick={onDownloadPdf}
-          disabled={isExporting}
+          aria-label={downloadLabel}
+          href={pdfUrl}
+          download={pdfFileName}
         >
-          {currentDownloadLabel}
-        </button>
+          {downloadLabel}
+        </a>
         <button
           className="lang-toggle"
           type="button"
           aria-label={switchLanguageAriaLabel}
           onClick={onToggleLanguage}
-          disabled={isExporting}
         >
           {toggleLabel}
         </button>

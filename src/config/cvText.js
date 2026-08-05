@@ -26,10 +26,6 @@ export const cvText = {
       en: "Download PDF",
       es: "Descargar PDF",
     },
-    generatingPdf: {
-      en: "Generating PDF…",
-      es: "Generando PDF…",
-    },
     switchLanguageAria: {
       fromEsToEn: "Switch language to English",
       fromEnToEs: "Cambiar idioma a español",

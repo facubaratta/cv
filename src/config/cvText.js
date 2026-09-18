@@ -180,8 +180,8 @@ export const cvText = {
             en: "Full-Stack Developer",
           },
           right: {
-            es: "Octubre 2024 ‒ Presente",
-            en: "October 2024 ‒ Present",
+            es: "Octubre 2024 ‒ Septiembre 2026",
+            en: "October 2024 ‒ September 2026",
           },
           subtitle: {
             es: "Creative Coefficient",

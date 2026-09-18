@@ -1,6 +1,7 @@
 import BilingualText from "./BilingualText";
 import EntryHeader from "./EntryHeader";
 import Anchor from "./Anchor";
+import ProjectList from "./ProjectList";
 
 function Entry({
   leftEs,
@@ -12,7 +13,24 @@ function Entry({
   bodyEs,
   bodyEn,
   href,
+  projects,
 }) {
+  if (projects) {
+    return (
+      <div className="entry project-entry">
+        <div className="entry-content">
+          <EntryHeader
+            leftEs={leftEs}
+            rightEs={rightEs}
+            leftEn={leftEn}
+            rightEn={rightEn}
+          />
+          <ProjectList projects={projects} />
+        </div>
+      </div>
+    );
+  }
+
   const content = (
     <>
       <EntryHeader

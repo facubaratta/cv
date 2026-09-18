@@ -233,22 +233,39 @@ export const cvText = {
         },
         {
           left: {
-            es: "Proyecto Web",
-            en: "Web Project",
+            es: "Proyectos Web Pequeños",
+            en: "Small Web Projects",
           },
           right: {
-            es: "2024",
-            en: "2024",
+            es: "2024 ‒ 2026",
+            en: "2024 ‒ 2026",
           },
-          subtitle: {
-            es: "Finca Don Clemente",
-            en: "Finca Don Clemente",
-          },
-          body: {
-            es: "Desarrollado por mí: fincadonclemente.com",
-            en: "Built by me: fincadonclemente.com",
-          },
-          href: "https://fincadonclemente.com",
+          projects: [
+            {
+              name: "Finca Don Clemente",
+              body: {
+                es: "sitio web para una finca y restaurante de campo en Salta",
+                en: "website for a countryside restaurant",
+              },
+              href: "https://fincadonclemente.com",
+            },
+            {
+              name: "ProTennisSquash",
+              body: {
+                es: "sitio web institucional",
+                en: "institutional website",
+              },
+              href: "https://protennis.com.ar",
+            },
+            {
+              name: "TimeMagnitude",
+              body: {
+                es: "Herramienta web interactiva para visualizar magnitudes de tiempo",
+                en: "Interactive web tool for visualizing magnitudes of time",
+              },
+              href: "https://facubaratta.github.io/time/",
+            },
+          ],
         },
       ],
     },

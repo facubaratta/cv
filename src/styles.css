@@ -151,6 +151,28 @@ button:focus-visible {
   padding: 3px 6px;
 }
 
+.project-list {
+  margin: 2px 0 0;
+  padding: 0 0 0 1.1em;
+  list-style: none;
+}
+
+.project-list li {
+  margin: 0 0 0.35em;
+  position: relative;
+  padding-left: 0.3em;
+}
+
+.project-list li::before {
+  content: "•";
+  position: absolute;
+  left: -0.9em;
+}
+
+.project-list .anchor {
+  text-decoration: none;
+}
+
 .entry > .anchor .left {
   text-decoration: none;
 }

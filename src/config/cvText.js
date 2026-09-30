@@ -283,8 +283,8 @@ export const cvText = {
           en: "English",
         },
         detail: {
-          es: "C1 — Curso avanzado en empresa en",
-          en: "C1 — Advanced in-company course at",
+          es: "C2 — Curso avanzado en empresa en",
+          en: "C2 — Advanced in-company course at",
         },
       },
       spanish: {

@@ -10,9 +10,6 @@ const outputDirectory = path.join(projectRoot, "public");
 const host = "127.0.0.1";
 const port = 4174;
 const cvUrl = `http://${host}:${port}/cv/`;
-const millimetersToPixels = (millimeters) => (millimeters * 96) / 25.4;
-const a4WidthPixels = millimetersToPixels(210);
-const a4HeightPixels = millimetersToPixels(297);
 
 function getLaunchOptions() {
   if (process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH) {
@@ -55,49 +52,7 @@ async function generatePdf(browser, language) {
     await page.goto(`${cvUrl}?lang=${language}`, { waitUntil: "networkidle" });
     await page.evaluate(() => document.fonts.ready);
 
-    const dimensions = await page.locator(".page").evaluate((element) => ({
-      width: element.scrollWidth,
-      height: element.scrollHeight,
-    }));
-    const scale = Math.min(
-      a4WidthPixels / dimensions.width,
-      a4HeightPixels / dimensions.height,
-    );
-
-    await page.addStyleTag({
-      content: `
-        @media print {
-          @page { size: A4; margin: 0; }
-
-          html,
-          body {
-            width: 210mm !important;
-            height: 297mm !important;
-            margin: 0 !important;
-            background: #fff !important;
-          }
-
-          body {
-            display: flex !important;
-            justify-content: center !important;
-            align-items: flex-start !important;
-          }
-
-          .page {
-            flex: 0 0 ${dimensions.width}px !important;
-            width: ${dimensions.width}px !important;
-            min-height: 0 !important;
-            height: ${dimensions.height}px !important;
-            margin: 0 !important;
-            zoom: ${scale} !important;
-          }
-
-          .top-controls {
-            display: none !important;
-          }
-        }
-      `,
-    });
+    await page.emulateMedia({ media: "print" });
 
     await page.pdf({
       path: outputPath,
@@ -105,6 +60,8 @@ async function generatePdf(browser, language) {
       printBackground: true,
       preferCSSPageSize: true,
       tagged: true,
+      displayHeaderFooter: false,
+      scale: 1,
     });
 
     console.log(`Generated ${path.relative(projectRoot, outputPath)}`);

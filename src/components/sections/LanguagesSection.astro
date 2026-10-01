@@ -10,7 +10,7 @@ const { section } = Astro.props;
   <ul class="languages">
     {section.items.map((item) => (
       <li class="language-item">
-        <strong>{item.name}</strong>
+        <strong>{item.name}</strong>{" "}
         <em>{item.detail}{item.link && <> <Anchor href={item.link.href}>{item.link.label}</Anchor></>}</em>
       </li>
     ))}

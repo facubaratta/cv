@@ -150,25 +150,20 @@ button:focus-visible {
   padding: 3px 6px;
 }
 
-.project-list {
+.project-list,
+.course-list {
   margin: 2px 0 0;
-  padding: 0 0 0 1.1em;
-  list-style: none;
+  padding: 0 0 0 1.4em;
+  list-style: disc;
 }
 
-.project-list li {
+.project-list li,
+.course-list li {
   margin: 0 0 0.35em;
-  position: relative;
-  padding-left: 0.3em;
 }
 
-.project-list li::before {
-  content: "•";
-  position: absolute;
-  left: -0.9em;
-}
-
-.project-list .anchor {
+.project-list .anchor,
+.course-list .anchor {
   text-decoration: none;
 }
 
@@ -199,36 +194,22 @@ button:focus-visible {
 
 .skills {
   margin: 0;
-  padding: 0 0 0 1.1em;
-  list-style: none;
+  padding: 0 0 0 1.4em;
+  list-style: disc;
 }
 
 .skills li {
   margin: 0 0 0.35em 0;
-  position: relative;
-  padding-left: 0.3em;
-}
-
-.skills li::before {
-  content: "•";
-  position: absolute;
-  left: -0.9em;
 }
 
 .languages {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.language-item {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
+.language-item + .language-item {
+  margin-top: 8px;
 }
 
 .experience-bullets {
@@ -297,13 +278,8 @@ button:focus-visible {
     white-space: normal;
   }
 
-  .languages {
-    gap: 16px;
-  }
-
-  .language-item {
-    flex-wrap: wrap;
-    gap: 2px 8px;
+  .language-item + .language-item {
+    margin-top: 16px;
   }
 
   .skills li {
@@ -374,7 +350,8 @@ button:focus-visible {
 
   .experience-bullets li + li,
   .skills li,
-  .project-list li {
+  .project-list li,
+  .course-list li {
     margin-top: 0;
     margin-bottom: 1.25pt;
   }
@@ -386,12 +363,13 @@ button:focus-visible {
   }
 
   .languages {
-    flex-direction: column;
-    flex-wrap: nowrap;
     width: 100%;
     padding: 0.5pt 0;
-    gap: 3pt;
     break-inside: avoid;
+  }
+
+  .language-item + .language-item {
+    margin-top: 3pt;
   }
 }
 

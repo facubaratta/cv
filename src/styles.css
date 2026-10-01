@@ -1,7 +1,6 @@
 :root {
   --page-width: 210mm;
-  --page-min-height: 297mm;
-  --page-padding: 0.75in;
+  --page-padding: 14mm;
   --line-height: 1.35;
 }
 
@@ -15,13 +14,12 @@ body {
   color: #000;
   font-family: "Times New Roman", Times, serif;
   line-height: var(--line-height);
-  font-size: 11pt;
+  font-size: 12pt;
 }
 
 .page {
   position: relative;
   width: var(--page-width);
-  min-height: var(--page-min-height);
   margin: 20px auto;
   background: #fff;
   padding: var(--page-padding);
@@ -29,7 +27,7 @@ body {
 
 .top-controls {
   position: absolute;
-  top: 18px;
+  top: 8px;
   left: 18px;
   right: 18px;
   display: flex;
@@ -266,7 +264,7 @@ html[lang="es"] .lang-en {
 
 /* Responsive and print styles */
 
-@media screen and (max-width: 900px) {
+@media screen and (width < 210mm) {
   html:not([data-pdf-export="true"]) .page {
     width: 100%;
     min-height: auto;
@@ -326,7 +324,90 @@ html[lang="es"] .lang-en {
   }
 }
 
-/* Shared by browser printing and the PDF exporter; never scale the content. */
+/* Use the same A4 content layout on desktop and in the PDF. */
+@media print, screen and (min-width: 210mm) {
+  .page {
+    min-height: 297mm;
+  }
+
+  .cv-content {
+    /* A4 height minus both 14mm margins, with print rounding clearance. */
+    min-height: 268.5mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cv-content > * {
+    flex-shrink: 0;
+  }
+
+  body {
+    font-size: 10pt;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  .contact {
+    margin: 5pt 0 0;
+    gap: 6pt;
+  }
+
+  .contact a {
+    padding: 0;
+  }
+
+  .section-title {
+    margin: 8pt 0 4.5pt;
+    font-size: 11.5pt;
+    break-after: avoid;
+  }
+
+  .entry > .anchor,
+  .entry-content {
+    display: block;
+    padding: 0.5pt 0;
+  }
+
+  .entry-header,
+  .subtitle {
+    break-after: avoid;
+  }
+
+  .experience .entry + .entry {
+    margin-top: 4.5pt;
+  }
+
+  .experience-bullets {
+    margin-top: 2.5pt;
+  }
+
+  .experience-bullets li + li,
+  .skills li,
+  .project-list li {
+    margin-top: 0;
+    margin-bottom: 1.25pt;
+  }
+
+  li {
+    break-inside: avoid;
+    orphans: 2;
+    widows: 2;
+  }
+
+  .languages {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0.5pt 0;
+    gap: 3pt;
+    break-inside: avoid;
+  }
+}
+
 @media print {
   @page {
     size: A4;
@@ -335,8 +416,6 @@ html[lang="es"] .lang-en {
 
   body {
     background: #fff;
-    font-size: 10.5pt;
-    line-height: 1.2;
   }
 
   .page {
@@ -348,63 +427,5 @@ html[lang="es"] .lang-en {
 
   .top-controls {
     display: none;
-  }
-
-  h1 {
-    font-size: 24pt;
-  }
-
-  .contact {
-    margin: 4pt 0 0;
-    gap: 6pt;
-  }
-
-  .contact a {
-    padding: 0;
-  }
-
-  .section-title {
-    margin: 7pt 0 4pt;
-    font-size: 11.5pt;
-    break-after: avoid;
-  }
-
-  .entry > .anchor,
-  .entry-content {
-    display: block;
-    padding: 0;
-  }
-
-  .entry-header,
-  .subtitle {
-    break-after: avoid;
-  }
-
-  .experience .entry + .entry {
-    margin-top: 4pt;
-  }
-
-  .experience-bullets {
-    margin-top: 2pt;
-  }
-
-  .experience-bullets li + li,
-  .skills li,
-  .project-list li {
-    margin-top: 0;
-    margin-bottom: 1pt;
-  }
-
-  li {
-    break-inside: avoid;
-    orphans: 2;
-    widows: 2;
-  }
-
-  .languages {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3pt 18pt;
-    break-inside: avoid;
   }
 }

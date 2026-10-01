@@ -1,6 +1,6 @@
 const title = {
-  es: "Consultor de IT",
-  en: "IT Consultant",
+  es: "Proyectos Web Independientes",
+  en: "Independent Web Projects",
 };
 
 const when = {

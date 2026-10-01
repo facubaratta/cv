@@ -181,18 +181,18 @@ export const cvText = {
           bullets: [
             {
               label: "Club Zurich",
-              es: "Formé parte del desarrollo de una plataforma web de beneficios dinámicos para clientes de Zurich Argentina, personalizados según sus pólizas y renovados mensualmente.",
-              en: "Contributed to the development of a personalized benefits platform for Zurich Argentina customers, with offers based on their insurance policies and refreshed monthly.",
+              es: "Desarrollé funcionalidades para una plataforma de beneficios para clientes de Zurich Argentina, con ofertas según sus pólizas y renovadas mensualmente.",
+              en: "Developed features for a personalized benefits platform for Zurich Argentina customers, with policy-based offers refreshed monthly.",
             },
             {
               // '/Users/facu/Documents/!Archive/Creative Coefficient/grm'
               label: "GRM",
-              es: "Integré el equipo de desarrollo de un sistema de gestión para un registro civil de Ecuador, con microservicios y arquitectura orientada a eventos con Kafka; trabajé en frontend y backend con React, TypeScript, Java y Spring Boot.",
-              en: "Worked on the team developing a management system for a civil registry in Ecuador, using microservices and an event-driven architecture with Kafka; contributed across React/TypeScript frontend and Java/Spring Boot backend.",
+              es: "Desarrollé funcionalidades de frontend con React y TypeScript y de backend con Java y Spring Boot para un sistema de registro civil de Ecuador, con microservicios y arquitectura orientada a eventos con Kafka.",
+              en: "Developed React/TypeScript frontend and Java/Spring Boot backend features for an Ecuadorian civil registry system using microservices and an event-driven architecture with Kafka.",
               children: [
                 {
-                  es: "Implementé reglas de negocio con Drools para formularios dinámicos: validaciones, visibilidad, campos requeridos y acciones según el estado del trámite; implementé lógica para la gestión de registros y rectificaciones.",
-                  en: "Implemented Drools business rules for dynamic forms, including validation, visibility, required fields, and actions based on workflow state; implemented logic for managing registry records and amendments.",
+                  es: "Implementé reglas Drools para validaciones, visibilidad, campos requeridos y acciones en formularios dinámicos, y lógica de gestión de registros y rectificaciones.",
+                  en: "Implemented Drools rules for dynamic form validation, visibility, required fields, and workflow actions, plus logic for registry records and amendments.",
                 },
                 {
                   es: "Desarrollé reportes dinámicos, actas y certificados con JasperReports, integrando datos, plantillas y reglas de negocio.",
@@ -247,8 +247,8 @@ export const cvText = {
             en: "March 2022 ‒ December 2024",
           },
           subtitle: {
-            es: "Algoritmos y Programación",
-            en: "Algorithms and Programming",
+            es: "Universidad de Buenos Aires — Algoritmos y Programación",
+            en: "University of Buenos Aires — Algorithms and Programming",
           },
           bullets: [
             {
@@ -256,8 +256,8 @@ export const cvText = {
               en: "Taught practical programming classes in C for Electronic Engineering students and guided student teams through programming assignments.",
             },
             {
-              es: "Realicé seguimiento de avances, resolución de consultas y corrección de entregas, con devolución sobre código y diseño de soluciones; coordiné actividades con el equipo docente.",
-              en: "Reviewed progress, answered questions, and graded assignments with feedback on code and solution design; coordinated course activities with the teaching team.",
+              es: "Resolví consultas y corregí entregas con devolución sobre código y diseño; coordiné actividades con el equipo docente.",
+              en: "Answered questions and graded assignments with feedback on code and design; coordinated activities with the teaching team.",
             },
           ],
           href: "https://algoritmos9511.gitlab.io/index.html",

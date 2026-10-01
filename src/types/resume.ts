@@ -28,6 +28,7 @@ export interface Entry {
   description?: string;
   href?: string;
   bullets?: Bullet[];
+  courses?: Pick<Entry, 'title' | 'organization' | 'description' | 'href'>[];
   projects?: { name: string; description: string; href: string }[];
 }
 

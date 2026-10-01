@@ -1,0 +1,15 @@
+---
+import type { Entry } from '../../types/resume';
+import Anchor from './Anchor.astro';
+interface Props { courses: NonNullable<Entry['courses']> }
+const { courses } = Astro.props;
+---
+<ul class="course-list">
+  {courses.map((course) => (
+    <li>
+      <strong>{course.href ? <Anchor href={course.href}>{course.title}</Anchor> : course.title}</strong>
+      {course.organization && <> — <em>{course.organization}</em></>}
+      {course.description && <>: {course.description}</>}
+    </li>
+  ))}
+</ul>

@@ -4,9 +4,10 @@ import { formatPeriod } from "../../utils/dates";
 import Anchor from "./Anchor.astro";
 import BulletList from "./BulletList.astro";
 import ProjectList from "./ProjectList.astro";
+import CourseList from "./CourseList.astro";
 interface Props { entry: Entry; locale: Locale }
 const { entry, locale } = Astro.props;
-const Wrapper = entry.href && !entry.projects ? Anchor : "div";
+const Wrapper = entry.href && !entry.projects && !entry.courses ? Anchor : "div";
 ---
 <div class="entry">
   <Wrapper href={entry.href!} class={Wrapper === "div" ? "entry-content" : undefined}>
@@ -15,7 +16,9 @@ const Wrapper = entry.href && !entry.projects ? Anchor : "div";
       <span class="entry-period">{formatPeriod(entry.period, locale)}</span>
     </span>
     {entry.organization && <span class="subtitle">{entry.organization}</span>}
-    {entry.projects ? (
+    {entry.courses ? (
+      <CourseList courses={entry.courses} />
+    ) : entry.projects ? (
       <ProjectList projects={entry.projects} />
     ) : entry.bullets ? (
       <BulletList bullets={entry.bullets} />

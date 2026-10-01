@@ -1,14 +1,13 @@
 import type { Resume } from '../../types/resume';
 import { universityBuenosAiresEn, universityBuenosAiresEs } from './education/universityBuenosAires';
-import { reactCompleteGuideEn, reactCompleteGuideEs } from './education/reactCompleteGuide';
-import { reactNativeExpoEn, reactNativeExpoEs } from './education/reactNativeExpo';
+import { reactCoursesEn, reactCoursesEs } from './education/reactCourses';
 
 export const educationEn = {
   title: "EDUCATION",
-  entries: [universityBuenosAiresEn, reactCompleteGuideEn, reactNativeExpoEn],
+  entries: [universityBuenosAiresEn, reactCoursesEn],
 } satisfies Resume['education'];
 
 export const educationEs = {
   title: "EDUCACIÓN",
-  entries: [universityBuenosAiresEs, reactCompleteGuideEs, reactNativeExpoEs],
+  entries: [universityBuenosAiresEs, reactCoursesEs],
 } satisfies Resume['education'];

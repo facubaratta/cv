@@ -226,7 +226,7 @@ button:focus-visible {
 }
 
 .language-item {
-  display: inline-flex;
+  display: flex;
   align-items: baseline;
   gap: 8px;
 }
@@ -299,6 +299,11 @@ button:focus-visible {
 
   .languages {
     gap: 16px;
+  }
+
+  .language-item {
+    flex-wrap: wrap;
+    gap: 2px 8px;
   }
 
   .skills li {

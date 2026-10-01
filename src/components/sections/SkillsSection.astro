@@ -1,5 +1,5 @@
-import SectionTitle from "../common/SectionTitle";
-import BilingualText from "../common/BilingualText";
+---
+import SectionTitle from "../common/SectionTitle.astro";
 
 const title = {
   es: "HABILIDADES TÉCNICAS",
@@ -69,31 +69,15 @@ const groups = [
   lowLevelProgramming,
 ];
 
-function SkillsSection() {
-  return (
-    <section>
-      <SectionTitle es={title.es} en={title.en} />
-
-      <ul className="skills">
-        {groups.map((group) => (
-          <li key={group.label.en}>
-            <BilingualText
-              es={
-                <>
-                  <strong>{group.label.es}:</strong> {group.value.es}
-                </>
-              }
-              en={
-                <>
-                  <strong>{group.label.en}:</strong> {group.value.en}
-                </>
-              }
-            />
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
-export default SkillsSection;
+---
+<section>
+  <SectionTitle es={title.es} en={title.en} />
+  <ul class="skills">
+    {groups.map((group) => (
+      <li>
+        <span class="lang-es"><strong>{group.label.es}:</strong> {group.value.es}</span>
+        <span class="lang-en"><strong>{group.label.en}:</strong> {group.value.en}</span>
+      </li>
+    ))}
+  </ul>
+</section>

@@ -8,10 +8,10 @@ const letter = {
   profile: {
     name: "Facundo Baratta",
     title: "Software Engineer",
-    email: "...",
-    phone: "...",
-    phoneHref: "https://wa.me/...",
-    location: "...",
+    email: "facundo.baratta@gmail.com",
+    phone: "(+54 9) 11 3361-0131",
+    phoneHref: "https://wa.me/5491133610131",
+    location: "Buenos Aires, Argentina",
     linkedin: "https://www.linkedin.com/in/facundo-baratta/",
   },
   date: "today", // `"today"` prints current date. supports fixed strings i.e. `"June 2, 2026"`

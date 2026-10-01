@@ -1,0 +1,20 @@
+---
+import BilingualText from "./BilingualText.astro";
+import Anchor from "./Anchor.astro";
+
+const { projects } = Astro.props;
+---
+<ul class="project-list">
+  {projects.map((project) => (
+    <li>
+      <Anchor href={project.href}>
+        <span class="subtitle">{project.name}:</span>{" "}
+        <BilingualText as="span" es={project.body.es} en={project.body.en} />
+        {" - "}
+        <span class="project-url">
+          {project.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+        </span>
+      </Anchor>
+    </li>
+  ))}
+</ul>

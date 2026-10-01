@@ -1,0 +1,6 @@
+---
+const { as: Component = "span", class: className, es, en } = Astro.props;
+const getClassName = (lang) => [className, `lang-${lang}`].filter(Boolean).join(" ");
+---
+<Component class={getClassName("es")}>{es}</Component>
+<Component class={getClassName("en")}>{en}</Component>

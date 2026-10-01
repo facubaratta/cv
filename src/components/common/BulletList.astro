@@ -1,0 +1,14 @@
+---
+import BilingualText from "./BilingualText.astro";
+
+const { bullets } = Astro.props;
+---
+<ul class="experience-bullets">
+  {bullets.map((bullet) => (
+    <li>
+      {bullet.label && <strong>{bullet.label}: </strong>}
+      <BilingualText es={bullet.es} en={bullet.en} />
+      {bullet.children && <Astro.self bullets={bullet.children} />}
+    </li>
+  ))}
+</ul>

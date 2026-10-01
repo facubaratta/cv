@@ -1,4 +1,4 @@
-import { spawn } from "node:child_process";
+import { dev } from "astro";
 import { existsSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -7,8 +7,6 @@ import { chromium } from "playwright";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDirectory = path.join(projectRoot, "public");
 const host = "127.0.0.1";
-const port = 4174;
-const cvUrl = `http://${host}:${port}/cv/`;
 
 function getLaunchOptions() {
   if (process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH) {
@@ -21,28 +19,7 @@ function getLaunchOptions() {
     : {};
 }
 
-async function waitForServer(serverProcess) {
-  const timeoutAt = Date.now() + 30_000;
-
-  while (Date.now() < timeoutAt) {
-    if (serverProcess.exitCode !== null) {
-      throw new Error(`Vite exited before PDF generation (code ${serverProcess.exitCode}).`);
-    }
-
-    try {
-      const response = await fetch(cvUrl);
-      if (response.ok) return;
-    } catch {
-      // Vite is still starting.
-    }
-
-    await new Promise((resolve) => setTimeout(resolve, 100));
-  }
-
-  throw new Error("Timed out waiting for Vite to start.");
-}
-
-async function generatePdf(browser, language) {
+async function generatePdf(browser, language, cvUrl) {
   const page = await browser.newPage({ viewport: { width: 1200, height: 1600 } });
 
   try {
@@ -75,29 +52,18 @@ async function generatePdf(browser, language) {
 
 mkdirSync(outputDirectory, { recursive: true });
 
-const viteProcess = spawn(
-  process.execPath,
-  [
-    path.join(projectRoot, "node_modules/vite/bin/vite.js"),
-    "--host",
-    host,
-    "--port",
-    String(port),
-    "--strictPort",
-  ],
-  { cwd: projectRoot, stdio: "inherit" },
-);
-
+let server;
 let browser;
 
 try {
-  await waitForServer(viteProcess);
+  server = await dev({ root: projectRoot, server: { host, port: 0 } });
+  const cvUrl = `http://${host}:${server.address.port}/cv/`;
   browser = await chromium.launch({ headless: true, ...getLaunchOptions() });
 
   for (const language of ["en", "es"]) {
-    await generatePdf(browser, language);
+    await generatePdf(browser, language, cvUrl);
   }
 } finally {
   await browser?.close();
-  viteProcess.kill("SIGTERM");
+  await server?.stop();
 }

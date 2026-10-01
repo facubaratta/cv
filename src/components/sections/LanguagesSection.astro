@@ -1,0 +1,68 @@
+---
+import SectionTitle from "../common/SectionTitle.astro";
+import Anchor from "../common/Anchor.astro";
+
+const title = {
+  es: "IDIOMAS",
+  en: "LANGUAGES",
+};
+
+const english = {
+  name: {
+    es: "Inglés",
+    en: "English",
+  },
+  detail: {
+    es: "C2 — Curso avanzado en empresa en",
+    en: "C2 — Advanced in-company course at",
+  },
+  synergy: {
+    url: "https://www.linkedin.com/company/synergy-language-solutions---argentina",
+    label: "Synergy Language Solutions Argentina",
+  },
+};
+
+const spanish = {
+  name: {
+    es: "Español",
+    en: "Spanish",
+  },
+  detail: {
+    es: "Nativo",
+    en: "Native",
+  },
+};
+---
+<section>
+  <SectionTitle es={title.es} en={title.en} />
+  <ul class="languages lang-es">
+    <li class="language-item">
+      <strong>{english.name.es}</strong>
+      <em>
+        {english.detail.es}{" "}
+        <Anchor href={english.synergy.url}>
+          {english.synergy.label}
+        </Anchor>
+      </em>
+    </li>
+    <li class="language-item">
+      <strong>{spanish.name.es}</strong>
+      <em>{spanish.detail.es}</em>
+    </li>
+  </ul>
+  <ul class="languages lang-en">
+    <li class="language-item">
+      <strong>{english.name.en}</strong>
+      <em>
+        {english.detail.en}{" "}
+        <Anchor href={english.synergy.url}>
+          {english.synergy.label}
+        </Anchor>
+      </em>
+    </li>
+    <li class="language-item">
+      <strong>{spanish.name.en}</strong>
+      <em>{spanish.detail.en}</em>
+    </li>
+  </ul>
+</section>

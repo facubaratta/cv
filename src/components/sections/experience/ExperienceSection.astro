@@ -1,0 +1,39 @@
+---
+import SectionTitle from "../../common/SectionTitle.astro";
+import Entry from "../../common/Entry.astro";
+import fullstackDev from "./fullStackDev.js";
+import itConsultant from "./itConsultant.js";
+import teachingAssistant from "./teachingAssistant.js";
+import independentWebProjects from "./independentWebProjects.js";
+
+const title = {
+  es: "EXPERIENCIA LABORAL Y EXTRACURRICULAR",
+  en: "WORK AND EXTRACURRICULAR EXPERIENCE",
+};
+
+const entries = [
+  fullstackDev,
+  itConsultant,
+  teachingAssistant,
+  independentWebProjects,
+];
+---
+<section class="experience">
+  <SectionTitle es={title.es} en={title.en} />
+
+  {entries.map((entry) => (
+    <Entry
+      leftEs={entry.left.es}
+      rightEs={entry.right.es}
+      leftEn={entry.left.en}
+      rightEn={entry.right.en}
+      subtitleEs={entry.subtitle?.es}
+      subtitleEn={entry.subtitle?.en}
+      bodyEs={entry.body?.es}
+      bodyEn={entry.body?.en}
+      href={entry.href}
+      projects={entry.projects}
+      bullets={entry.bullets}
+    />
+  ))}
+</section>

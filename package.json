@@ -1,23 +1,23 @@
 {
-  "name": "cv-react",
+  "name": "cv-astro",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "astro dev",
     "pdf:generate": "node scripts/generate-pdfs.mjs",
-    "build": "npm run pdf:generate && vite build",
+    "build": "npm run pdf:generate && astro build",
     "letter": "node scripts/cover-letter.mjs",
-    "preview": "vite preview"
+    "preview": "astro preview"
   },
   "dependencies": {
-    "jspdf": "^4.2.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "astro": "^7.3.5",
+    "jspdf": "^4.2.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "playwright": "^1.62.1",
-    "vite": "^7.3.1"
+    "playwright": "^1.62.1"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

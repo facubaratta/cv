@@ -1,0 +1,33 @@
+---
+import Header from "../components/Header.astro";
+import TopControls from "../components/TopControls.astro";
+import EducationSection from "../components/sections/EducationSection.astro";
+import SkillsSection from "../components/sections/SkillsSection.astro";
+import ExperienceSection from "../components/sections/experience/ExperienceSection.astro";
+import LanguagesSection from "../components/sections/LanguagesSection.astro";
+import "../styles.css";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bilingual developer CV for Facundo Baratta, including education, technical skills, and work experience." />
+    <title>CV - Facundo Baratta</title>
+    <script is:inline>
+      document.documentElement.lang = new URLSearchParams(window.location.search).get("lang") === "es" ? "es" : "en";
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <TopControls />
+      <div class="cv-content">
+        <Header />
+        <EducationSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <LanguagesSection />
+      </div>
+    </main>
+  </body>
+</html>

@@ -172,15 +172,6 @@ button:focus-visible {
   text-decoration: none;
 }
 
-.entry > .anchor .left {
-  text-decoration: none;
-}
-
-.inline-link-like {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
 .entry > .anchor:hover,
 .entry > .anchor:focus-visible {
   background: #f7f7f7;
@@ -256,68 +247,68 @@ button:focus-visible {
 /* Responsive and print styles */
 
 @media screen and (width < 210mm) {
-  html:not([data-pdf-export="true"]) .page {
+  .page {
     width: 100%;
     min-height: auto;
     margin: 0;
     padding: 20px 16px;
   }
 
-  html:not([data-pdf-export="true"]) .top-controls {
+  .top-controls {
     position: static;
     width: 100%;
     gap: 8px;
     flex-wrap: wrap;
   }
 
-  html:not([data-pdf-export="true"]) .top-controls-actions {
+  .top-controls-actions {
     justify-content: flex-end;
     margin-bottom: 12px;
   }
 }
 
 @media screen and (max-width: 640px) {
-  html:not([data-pdf-export="true"]) body {
+  body {
     font-size: 10.5pt;
   }
 
-  html:not([data-pdf-export="true"]) h1 {
+  h1 {
     font-size: 24px;
   }
 
-  html:not([data-pdf-export="true"]) .contact {
+  .contact {
     flex-direction: column;
     flex-wrap: nowrap;
     word-break: break-word;
     gap: 3px;
   }
 
-  html:not([data-pdf-export="true"]) .contact-separator {
+  .contact-separator {
     display: none;
   }
 
-  html:not([data-pdf-export="true"]) .entry-header {
+  .entry-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
   }
 
-  html:not([data-pdf-export="true"]) .entry-period {
+  .entry-period {
     white-space: normal;
   }
 
-  html:not([data-pdf-export="true"]) .languages {
+  .languages {
     gap: 16px;
   }
 
-  html:not([data-pdf-export="true"]) .skills li {
+  .skills li {
     margin-bottom: 0.3em;
   }
 }
 
 /* Use the same A4 content layout on desktop and in the PDF. */
 @media print, screen and (min-width: 210mm) {
-  html:not([data-pdf-export="true"]) .page {
+  .page {
     min-height: 297mm;
   }
 
@@ -333,16 +324,16 @@ button:focus-visible {
     flex-shrink: 0;
   }
 
-  html:not([data-pdf-export="true"]) body {
+  body {
     font-size: 10pt;
     line-height: 1.2;
   }
 
-  html:not([data-pdf-export="true"]) h1 {
+  h1 {
     font-size: 24pt;
   }
 
-  html:not([data-pdf-export="true"]) .contact {
+  .contact {
     margin: 5pt 0 0;
     gap: 6pt;
   }
@@ -389,7 +380,7 @@ button:focus-visible {
     widows: 2;
   }
 
-  html:not([data-pdf-export="true"]) .languages {
+  .languages {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
@@ -405,18 +396,18 @@ button:focus-visible {
     margin: 14mm;
   }
 
-  html:not([data-pdf-export="true"]) body {
+  body {
     background: #fff;
   }
 
-  html:not([data-pdf-export="true"]) .page {
+  .page {
     width: auto;
     min-height: auto;
     margin: 0;
     padding: 0;
   }
 
-  html:not([data-pdf-export="true"]) .top-controls {
+  .top-controls {
     display: none;
   }
 }

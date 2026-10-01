@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "pdf:generate": "node scripts/generate-pdfs.mjs",
-    "build": "npm run pdf:generate && astro build",
+    "pdf:generate": "astro build && node scripts/generate-pdfs.mjs",
+    "build": "npm run pdf:generate",
     "letter": "node scripts/cover-letter.mjs",
     "preview": "astro preview",
     "test": "node scripts/check-site.mjs"

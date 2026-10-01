@@ -9,13 +9,14 @@ Older `/cv/?lang=es` links redirect to the Spanish page when JavaScript is enabl
 
 - `src/content/sections/`: one file per content section (`education`, `skills`, `experience`, `languages`), each exporting its English and Spanish versions together. `document.ts` owns translated descriptions and controls.
 - `src/content/sections/education/` and `src/content/sections/experience/`: one file per entry, with separate English and Spanish exports. Dates and identical metadata are shared within the entry. The parent section files aggregate entries in display order.
+- `src/content/sections/education/reactCourses.ts`: owns both React courses and their grouped entry, with shared dates, names, providers, and links, plus separate English and Spanish descriptions.
 - `src/utils/dates.ts`: formats shared year/month values for the page language; use `end: 'present'` for ongoing roles, and omit `end` for a single date.
 - `src/content/en.ts` and `src/content/es.ts`: final resume objects that aggregate the corresponding section exports. The content follows `src/types/resume.ts`.
 - `src/content/profile.js`: contact details shared with the cover letter.
 - `src/utils/locales.js`: language paths, names, and PDF filenames.
 - `src/layouts/Resume.astro`: document structure and section order.
 - `src/components/`: presentation only; components receive content via typed props.
-- `src/styles.css`: responsive web and A4 print layout.
+- `src/styles.css`: responsive web and A4 print layout. Skills and projects use native list markers, and language labels and details use inline text so PDF extraction keeps them together.
 - `scripts/cover-letter.mjs`: cover-letter wording and PDF layout.
 
 ## Commands
@@ -34,7 +35,9 @@ npm test
 the PDFs into `public/` and `dist/`. `pdf:generate` runs the same complete pipeline.
 The export uses the production pages and the base path in `astro.config.mjs`.
 `test` checks the built site, including navigation without JavaScript, legacy
-links, download responses, content completeness, and mobile overflow.
+links, download responses, content completeness, and mobile overflow. It also
+parses each PDF with PDF.js and checks that it is one tagged A4 page whose
+header and section text match the website in reading order.
 
 On macOS the browser scripts can use installed Google Chrome. Set
 `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to use another Chromium executable.

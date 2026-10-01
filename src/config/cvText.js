@@ -139,6 +139,16 @@ export const cvText = {
         },
         {
           label: {
+            es: "Desarrollo asistido por IA",
+            en: "AI-Assisted Development",
+          },
+          value: {
+            es: "Agentes de código, ingeniería de contexto (AGENTS.md, Agent Skills) y desarrollo guiado por especificaciones",
+            en: "Coding agents, context engineering (AGENTS.md, Agent Skills), and spec-driven development",
+          },
+        },
+        {
+          label: {
             es: "Programación de bajo nivel",
             en: "Low-level programming",
           },

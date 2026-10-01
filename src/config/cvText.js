@@ -178,10 +178,32 @@ export const cvText = {
             es: "Creative Coefficient",
             en: "Creative Coefficient",
           },
-          body: {
-            es: "Nuestro equipo entrega soluciones web end-to-end, incluyendo un proyecto empresarial con módulos backend y frontend. Desarrollo funcionalidades con Java + Spring Boot, React + TypeScript, SQL Server/MySQL y Docker. En equipos colaborativos, aplico Agile (Scrum, Planning Poker), con foco en comunicación efectiva, autogestión y resolución de problemas",
-            en: "Our team delivers end-to-end web solutions, including an enterprise project spanning backend and frontend modules. I build features with Java + Spring Boot, React + TypeScript, SQL Server/MySQL, and Docker. In collaborative teams, I apply Agile practices (Scrum, Planning Poker), with strong communication, self-management, and problem-solving",
-          },
+          bullets: [
+            {
+              label: "Club Zurich",
+              es: "Formé parte del desarrollo de una plataforma web de beneficios dinámicos para clientes de Zurich Argentina, personalizados según sus pólizas y renovados mensualmente.",
+              en: "Contributed to the development of a personalized benefits platform for Zurich Argentina customers, with offers based on their insurance policies and refreshed monthly.",
+            },
+            {
+              label: "GRM",
+              es: "Integré el equipo de desarrollo de un sistema de gestión para un registro civil de Ecuador, con microservicios y arquitectura orientada a eventos con Kafka; trabajé en frontend y backend con React, TypeScript, Java y Spring Boot.",
+              en: "Worked on the team developing a management system for a civil registry in Ecuador, using microservices and an event-driven architecture with Kafka; contributed across React/TypeScript frontend and Java/Spring Boot backend.",
+              children: [
+                {
+                  es: "Implementé reglas de negocio con Drools para formularios dinámicos: validaciones, visibilidad, campos requeridos y acciones según el estado del trámite; implementé lógica para la gestión de registros y rectificaciones.",
+                  en: "Implemented Drools business rules for dynamic forms, including validation, visibility, required fields, and actions based on workflow state; implemented logic for managing registry records and amendments.",
+                },
+                {
+                  es: "Desarrollé reportes dinámicos, actas y certificados con JasperReports, integrando datos, plantillas y reglas de negocio.",
+                  en: "Developed dynamic reports, registry documents, and certificates with JasperReports, integrating data, templates, and business rules.",
+                },
+                {
+                  es: "Preparé el repositorio para agentes de IA con AGENTS.md y automaticé builds Docker y verificaciones de Drools y JasperReports.",
+                  en: "Prepared the repository for AI coding agents with AGENTS.md and automated Docker builds and Drools/JasperReports checks.",
+                },
+              ],
+            },
+          ],
           href: "https://creativecoefficient.net",
         },
         {
@@ -197,10 +219,20 @@ export const cvText = {
             es: "Health & Harmony Insure",
             en: "Health & Harmony Insure",
           },
-          body: {
-            es: "Consultor privado de soluciones digitales e IT para una agencia de seguros de salud en Maryland, EEUU. Implementé herramientas internas de automatización y generación de contenido, realicé configuración administrativa de CRM (Salesforce) y desarrollé el sitio bilingüe de la agencia: hnhinsure.com",
-            en: "Private consultant for digital and IT solutions for a health insurance agency in Maryland, USA. I implemented internal automation and content-generation tools, configured Salesforce CRM administration, and developed the agency’s bilingual website: hnhinsure.com",
-          },
+          bullets: [
+            {
+              es: "Desarrollé y mantuve hnhinsure.com, el sitio bilingüe de una agencia de seguros de salud en Maryland, EEUU, con React y TypeScript; incorporé blog, CMS, SEO y despliegue en Cloudflare.",
+              en: "Built and maintained hnhinsure.com, the bilingual website of a health insurance agency in Maryland, USA, using React and TypeScript; added a blog, CMS, SEO, and Cloudflare deployment.",
+            },
+            {
+              es: "Creé herramientas de comunicación: un generador de emails en React con salida HTML compatible con clientes de correo y una automatización de envío de SMS mediante la API de RingCentral.",
+              en: "Created communication tools: a React email builder producing email-client-compatible HTML and an SMS sending automation using the RingCentral API.",
+            },
+            {
+              es: "Automaticé con Python la limpieza, normalización y consolidación de datos de clientes y solicitudes para CRM y planillas, con control de duplicados y conflictos; configuré y administré Salesforce.",
+              en: "Automated cleaning, normalization, and consolidation of client and application data for CRM and spreadsheets using Python, with duplicate and conflict handling; configured and administered Salesforce.",
+            },
+          ],
           href: "https://hnhinsure.com",
         },
         {
@@ -216,10 +248,16 @@ export const cvText = {
             es: "Algoritmos y Programación",
             en: "Algorithms and Programming",
           },
-          body: {
-            es: "Dicté clases prácticas y corregí trabajos en la materia de programación de Electrónica, con foco en C",
-            en: "I taught lab sessions and graded coursework in the Electronics programming course, with a focus on C",
-          },
+          bullets: [
+            {
+              es: "Dicté clases prácticas de programación en C para estudiantes de Ingeniería Electrónica y guié a los grupos durante el desarrollo de trabajos prácticos.",
+              en: "Taught practical programming classes in C for Electronic Engineering students and guided student teams through programming assignments.",
+            },
+            {
+              es: "Realicé seguimiento de avances, resolución de consultas y corrección de entregas, con devolución sobre código y diseño de soluciones; coordiné actividades con el equipo docente.",
+              en: "Reviewed progress, answered questions, and graded assignments with feedback on code and solution design; coordinated course activities with the teaching team.",
+            },
+          ],
           href: "https://algoritmos9511.gitlab.io/index.html",
         },
         {

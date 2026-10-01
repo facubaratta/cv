@@ -113,8 +113,8 @@ export const cvText = {
             en: "Software Engineering",
           },
           value: {
-            es: "Principios de diseño, POO, estructuras de datos, control de versiones (Git), arquitectura modular (Docker), pipelines CI/CD",
-            en: "Design principles, OOP, data structures, version control (Git), modular architecture (Docker), CI/CD pipelines",
+            es: "Principios de diseño, POO, estructuras de datos, Git, Docker, pipelines CI/CD",
+            en: "Design principles, OOP, data structures, Git, Docker, CI/CD pipelines",
           },
         },
         {
@@ -143,8 +143,8 @@ export const cvText = {
             en: "AI-Assisted Development",
           },
           value: {
-            es: "Agentes de código, ingeniería de contexto (AGENTS.md, Agent Skills) y desarrollo guiado por especificaciones",
-            en: "Coding agents, context engineering (AGENTS.md, Agent Skills), and spec-driven development",
+            es: "Agentes de código, ingeniería de contexto, desarrollo guiado por especificaciones",
+            en: "Coding agents, context engineering, spec-driven development",
           },
         },
         {

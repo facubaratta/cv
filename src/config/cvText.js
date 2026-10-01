@@ -262,8 +262,8 @@ export const cvText = {
         },
         {
           left: {
-            es: "Proyectos Web Pequeños",
-            en: "Small Web Projects",
+            es: "Proyectos Web Independientes",
+            en: "Independent Web Projects",
           },
           right: {
             es: "2024 ‒ 2026",

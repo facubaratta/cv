@@ -15,6 +15,16 @@ const shared = {
   "organization": "Creative Coefficient"
 } satisfies Partial<Entry>;
 
+/* Application role description (English):
+Developed full-stack features at Creative Coefficient using React, TypeScript,
+Java, and Spring Boot. Worked on an Ecuadorian civil registry system built with
+microservices and an event-driven architecture using Kafka. Implemented Drools
+business rules for dynamic forms and registry workflows, and created reports,
+registry documents, and certificates with JasperReports. Prepared the repository
+for AI coding agents and automated Docker builds and validation checks. Also
+developed features for Club Zurich, a personalized customer benefits platform
+for Zurich Argentina.
+*/
 export const fullStackDeveloperEn = {
   ...shared,
   "bullets": [

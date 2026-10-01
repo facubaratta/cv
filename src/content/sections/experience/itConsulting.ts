@@ -12,6 +12,15 @@ const shared = {
   "organization": "Health & Harmony Insure"
 } satisfies Partial<Entry>;
 
+/* Application role description (English):
+Provided project-based IT consulting for Health & Harmony Insure, a health
+insurance agency in Maryland, USA. Built and maintained its bilingual website
+with React and TypeScript, including a blog, CMS, SEO, and Cloudflare deployment.
+Developed an HTML email builder and automated SMS communications through the
+RingCentral API. Used Python to clean and consolidate client and application
+data, handle duplicates and conflicts, and support CRM and spreadsheet workflows.
+Configured and administered Salesforce.
+*/
 export const itConsultingEn = {
   ...shared,
   "bullets": [

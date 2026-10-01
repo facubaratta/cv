@@ -14,6 +14,13 @@ const shared = {
   "href": "https://algoritmos9511.gitlab.io/index.html"
 } satisfies Partial<Entry>;
 
+/* Application role description (English):
+Taught practical C programming classes for Electronic Engineering students in
+the Algorithms and Programming course at the University of Buenos Aires. Guided
+student teams through programming assignments, answered technical questions,
+and graded submissions with feedback on code and software design. Coordinated
+class activities and assignment support with the teaching team.
+*/
 export const teachingAssistantEn = {
   ...shared,
   "bullets": [

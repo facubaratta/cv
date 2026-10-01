@@ -1,24 +1,32 @@
 import Anchor from "./common/Anchor";
-import { cvText } from "../config/cvText";
 
-const { header } = cvText;
+const name = "FACUNDO BARATTA";
+const email = "facundo.baratta@gmail.com";
+const linkedinUsername = "facundo-baratta";
+const phone = {
+  href: "https://wa.me/5491133610131",
+  label: "(+54 9) 11 3361-0131",
+};
+
+const Separator = () => (
+  <span className="contact-separator" aria-hidden="true">
+    |
+  </span>
+);
 
 function Header() {
+  const linkedinUrl = `https://www.linkedin.com/in/${linkedinUsername}/`;
   return (
     <header>
       <h1>
-        <Anchor href={header.linkedinUrl}>{header.name}</Anchor>
+        <Anchor href={linkedinUrl}>{name}</Anchor>
       </h1>
       <p className="contact">
-        <Anchor href={header.email.href}>{header.email.label}</Anchor>
-        <span className="contact-separator" aria-hidden="true">
-          {header.contactSeparator}
-        </span>
-        <Anchor href={header.phone.href}>{header.phone.label}</Anchor>
-        <span className="contact-separator" aria-hidden="true">
-          {header.contactSeparator}
-        </span>
-        <Anchor href={header.linkedinUrl}>{header.linkedinLabel}</Anchor>
+        <Anchor href={`mailto:${email}`}>{email}</Anchor>
+        <Separator />
+        <Anchor href={phone.href}>{phone.label}</Anchor>
+        <Separator />
+        <Anchor href={linkedinUrl}>in/{linkedinUsername}</Anchor>
       </p>
     </header>
   );

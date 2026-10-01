@@ -3,7 +3,6 @@ import { existsSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { chromium } from "playwright";
-import { cvText } from "../src/config/cvText.js";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDirectory = path.join(projectRoot, "public");
@@ -45,12 +44,16 @@ async function waitForServer(serverProcess) {
 
 async function generatePdf(browser, language) {
   const page = await browser.newPage({ viewport: { width: 1200, height: 1600 } });
-  const fileName = `${cvText.meta.pdfBaseName}_${language.toUpperCase()}.pdf`;
-  const outputPath = path.join(outputDirectory, fileName);
 
   try {
     await page.goto(`${cvUrl}?lang=${language}`, { waitUntil: "networkidle" });
     await page.evaluate(() => document.fonts.ready);
+
+    const fileName = await page.locator("a[download]").getAttribute("download");
+    if (!fileName || path.basename(fileName) !== fileName || !fileName.endsWith(".pdf")) {
+      throw new Error(`Invalid PDF download filename for language ${language}.`);
+    }
+    const outputPath = path.join(outputDirectory, fileName);
 
     await page.emulateMedia({ media: "print" });
 

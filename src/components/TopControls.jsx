@@ -1,7 +1,24 @@
-import { cvText } from "../config/cvText";
+const controls = {
+  linksIcon: "🔗",
+  linksNote: {
+    en: "Entries are links",
+    es: "Las entradas son enlaces",
+  },
+  downloadPdf: {
+    en: "Download PDF",
+    es: "Descargar PDF",
+  },
+  switchLanguageAria: {
+    fromEsToEn: "Switch language to English",
+    fromEnToEs: "Cambiar idioma a español",
+  },
+  languageToggle: {
+    en: "English",
+    es: "Español",
+  },
+};
 
 function TopControls({ isSpanish, onToggleLanguage, pdfFileName, pdfUrl }) {
-  const { controls } = cvText;
   const downloadLabel = isSpanish ? controls.downloadPdf.es : controls.downloadPdf.en;
   const switchLanguageAriaLabel = isSpanish
     ? controls.switchLanguageAria.fromEsToEn

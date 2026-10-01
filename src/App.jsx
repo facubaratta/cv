@@ -3,9 +3,10 @@ import Header from "./components/Header";
 import TopControls from "./components/TopControls";
 import EducationSection from "./components/sections/EducationSection";
 import SkillsSection from "./components/sections/SkillsSection";
-import ExperienceSection from "./components/sections/ExperienceSection";
+import ExperienceSection from "./components/sections/experience/ExperienceSection.jsx";
 import LanguagesSection from "./components/sections/LanguagesSection";
-import { cvText } from "./config/cvText";
+
+const pdfBaseName = "Facundo_Baratta_CV";
 
 function getInitialLanguage() {
   return new URLSearchParams(window.location.search).get("lang") === "es"
@@ -22,7 +23,7 @@ function App() {
 
   const isSpanish = lang === "es";
 
-  const pdfFileName = `${cvText.meta.pdfBaseName}_${lang.toUpperCase()}.pdf`;
+  const pdfFileName = `${pdfBaseName}_${lang.toUpperCase()}.pdf`;
   const pdfUrl = `${import.meta.env.BASE_URL}${pdfFileName}`;
 
   return (

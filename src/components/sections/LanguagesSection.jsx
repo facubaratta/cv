@@ -1,37 +1,69 @@
 import SectionTitle from "../common/SectionTitle";
 import Anchor from "../common/Anchor";
-import { cvText } from "../../config/cvText";
+
+const title = {
+  es: "IDIOMAS",
+  en: "LANGUAGES",
+};
+
+const english = {
+  name: {
+    es: "Inglés",
+    en: "English",
+  },
+  detail: {
+    es: "C2 — Curso avanzado en empresa en",
+    en: "C2 — Advanced in-company course at",
+  },
+  synergy: {
+    url: "https://www.linkedin.com/company/synergy-language-solutions---argentina",
+    label: "Synergy Language Solutions Argentina",
+  },
+};
+
+const spanish = {
+  name: {
+    es: "Español",
+    en: "Spanish",
+  },
+  detail: {
+    es: "Nativo",
+    en: "Native",
+  },
+};
 
 function LanguagesSection() {
-  const { languages } = cvText.sections;
-
   return (
     <section>
-      <SectionTitle es={languages.title.es} en={languages.title.en} />
+      <SectionTitle es={title.es} en={title.en} />
       <ul className="languages lang-es">
         <li className="language-item">
-          <strong>{languages.english.name.es}</strong>
+          <strong>{english.name.es}</strong>
           <em>
-            {languages.english.detail.es}{" "}
-            <Anchor href={languages.synergyUrl}>{languages.synergyLabel}</Anchor>
+            {english.detail.es}{" "}
+            <Anchor href={english.synergy.url}>
+              {english.synergy.label}
+            </Anchor>
           </em>
         </li>
         <li className="language-item">
-          <strong>{languages.spanish.name.es}</strong>
-          <em>{languages.spanish.detail.es}</em>
+          <strong>{spanish.name.es}</strong>
+          <em>{spanish.detail.es}</em>
         </li>
       </ul>
       <ul className="languages lang-en">
         <li className="language-item">
-          <strong>{languages.english.name.en}</strong>
+          <strong>{english.name.en}</strong>
           <em>
-            {languages.english.detail.en}{" "}
-            <Anchor href={languages.synergyUrl}>{languages.synergyLabel}</Anchor>
+            {english.detail.en}{" "}
+            <Anchor href={english.synergy.url}>
+              {english.synergy.label}
+            </Anchor>
           </em>
         </li>
         <li className="language-item">
-          <strong>{languages.spanish.name.en}</strong>
-          <em>{languages.spanish.detail.en}</em>
+          <strong>{spanish.name.en}</strong>
+          <em>{spanish.detail.en}</em>
         </li>
       </ul>
     </section>

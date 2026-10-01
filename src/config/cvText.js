@@ -57,7 +57,7 @@ export const cvText = {
           },
           body: {
             es: "Ingeniería Informática, graduado en diciembre de 2025",
-            en: "Computer Engineering (“Ingeniería Informática”, CS-equivalent curriculum), graduated December 2025",
+            en: "Computer Engineering, graduated December 2025",
           },
           href: "https://www.fi.uba.ar/grado/carreras/ingenieria-en-informatica",
         },

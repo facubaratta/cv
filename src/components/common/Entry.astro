@@ -1,39 +1,26 @@
 ---
-import EntryHeader from "./EntryHeader.astro";
-import EntryDetails from "./EntryDetails.astro";
-import EntryFrame from "./EntryFrame.astro";
+import type { Entry, Locale } from "../../types/resume";
+import { formatPeriod } from "../../utils/dates";
+import Anchor from "./Anchor.astro";
+import BulletList from "./BulletList.astro";
 import ProjectList from "./ProjectList.astro";
-
-const {
-  leftEs,
-  rightEs,
-  leftEn,
-  rightEn,
-  subtitleEs,
-  subtitleEn,
-  bodyEs,
-  bodyEn,
-  href,
-  projects,
-  bullets,
-} = Astro.props;
+interface Props { entry: Entry; locale: Locale }
+const { entry, locale } = Astro.props;
+const Wrapper = entry.href && !entry.projects ? Anchor : "div";
 ---
-<EntryFrame href={projects ? undefined : href} isProjectEntry={Boolean(projects)}>
-  <EntryHeader
-    leftEs={leftEs}
-    rightEs={rightEs}
-    leftEn={leftEn}
-    rightEn={rightEn}
-  />
-  {projects ? (
-    <ProjectList projects={projects} />
-  ) : (
-    <EntryDetails
-      subtitleEs={subtitleEs}
-      subtitleEn={subtitleEn}
-      bodyEs={bodyEs}
-      bodyEn={bodyEn}
-      bullets={bullets}
-    />
-  )}
-</EntryFrame>
+<div class="entry">
+  <Wrapper href={entry.href!} class={Wrapper === "div" ? "entry-content" : undefined}>
+    <span class="entry-header">
+      <span class="entry-title">{entry.title}</span>
+      <span class="entry-period">{formatPeriod(entry.period, locale)}</span>
+    </span>
+    {entry.organization && <span class="subtitle">{entry.organization}</span>}
+    {entry.projects ? (
+      <ProjectList projects={entry.projects} />
+    ) : entry.bullets ? (
+      <BulletList bullets={entry.bullets} />
+    ) : entry.description && (
+      <><br />{entry.description}</>
+    )}
+  </Wrapper>
+</div>

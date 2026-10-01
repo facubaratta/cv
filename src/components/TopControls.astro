@@ -1,42 +1,20 @@
 ---
-const pdfBaseName = "Facundo_Baratta_CV";
-const pdfFileName = `${pdfBaseName}_EN.pdf`;
-const pdfBaseUrl = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+import type { Resume } from "../types/resume";
+import { locales } from "../utils/locales.js";
+import { basePath } from "../utils/paths.js";
+interface Props { resume: Resume }
+const { resume } = Astro.props;
+const base = basePath(import.meta.env.BASE_URL);
+const current = locales[resume.locale];
+const alternateLocale = resume.locale === "en" ? "es" : "en";
+const alternate = locales[alternateLocale];
 ---
-<div class="top-controls" data-pdf-base-name={pdfBaseName} data-pdf-base-url={pdfBaseUrl}>
+<nav class="top-controls" aria-label={resume.locale === "en" ? "CV controls" : "Opciones del CV"}>
   <p class="interactive-note">
-    <span aria-hidden="true">🔗 </span>
-    <span class="lang-en">Entries are links</span>
-    <span class="lang-es">Las entradas son enlaces</span>
+    <span aria-hidden="true">🔗 </span>{resume.controls.note}
   </p>
   <div class="top-controls-actions">
-    <a class="pdf-btn" aria-label="Download PDF" href={`${pdfBaseUrl}${pdfFileName}`} download={pdfFileName}>Download PDF</a>
-    <button class="lang-toggle" type="button" aria-label="Cambiar idioma a español">Español</button>
+    <a class="pdf-btn" href={`${base}${current.pdf}`} download={current.pdf}>{resume.controls.download}</a>
+    <a class="lang-toggle" href={`${base}${alternate.path}`} hreflang={alternateLocale} lang={alternateLocale}>{alternate.label}</a>
   </div>
-</div>
-
-<script>
-  const controls = document.querySelector<HTMLElement>(".top-controls");
-  const downloadLink = controls?.querySelector<HTMLAnchorElement>(".pdf-btn");
-  const languageToggle = controls?.querySelector<HTMLButtonElement>(".lang-toggle");
-
-  function setLanguage(language: "en" | "es") {
-    document.documentElement.lang = language;
-    if (!controls || !downloadLink || !languageToggle) return;
-
-    const isSpanish = language === "es";
-    const fileName = `${controls.dataset.pdfBaseName}_${language.toUpperCase()}.pdf`;
-    const downloadLabel = isSpanish ? "Descargar PDF" : "Download PDF";
-    downloadLink.href = `${controls.dataset.pdfBaseUrl}${fileName}`;
-    downloadLink.download = fileName;
-    downloadLink.textContent = downloadLabel;
-    downloadLink.setAttribute("aria-label", downloadLabel);
-    languageToggle.textContent = isSpanish ? "English" : "Español";
-    languageToggle.setAttribute("aria-label", isSpanish ? "Switch language to English" : "Cambiar idioma a español");
-  }
-
-  setLanguage(new URLSearchParams(window.location.search).get("lang") === "es" ? "es" : "en");
-  languageToggle?.addEventListener("click", () => {
-    setLanguage(document.documentElement.lang === "es" ? "en" : "es");
-  });
-</script>
+</nav>

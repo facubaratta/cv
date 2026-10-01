@@ -62,7 +62,8 @@ body {
   cursor: pointer;
 }
 
-.pdf-btn {
+.pdf-btn,
+.lang-toggle {
   display: inline-block;
   text-decoration: none;
 }
@@ -193,11 +194,11 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-.entry-header .left {
+.entry-title {
   font-weight: 700;
 }
 
-.entry-header .right {
+.entry-period {
   white-space: nowrap;
 }
 
@@ -252,16 +253,6 @@ button:focus-visible {
   margin-top: 1em;
 }
 
-/* Lang controls */
-
-html[lang="en"] .lang-es {
-  display: none !important;
-}
-
-html[lang="es"] .lang-en {
-  display: none !important;
-}
-
 /* Responsive and print styles */
 
 @media screen and (width < 210mm) {
@@ -311,7 +302,7 @@ html[lang="es"] .lang-en {
     gap: 0;
   }
 
-  html:not([data-pdf-export="true"]) .entry-header .right {
+  html:not([data-pdf-export="true"]) .entry-period {
     white-space: normal;
   }
 
@@ -326,7 +317,7 @@ html[lang="es"] .lang-en {
 
 /* Use the same A4 content layout on desktop and in the PDF. */
 @media print, screen and (min-width: 210mm) {
-  .page {
+  html:not([data-pdf-export="true"]) .page {
     min-height: 297mm;
   }
 
@@ -342,16 +333,16 @@ html[lang="es"] .lang-en {
     flex-shrink: 0;
   }
 
-  body {
+  html:not([data-pdf-export="true"]) body {
     font-size: 10pt;
     line-height: 1.2;
   }
 
-  h1 {
+  html:not([data-pdf-export="true"]) h1 {
     font-size: 24pt;
   }
 
-  .contact {
+  html:not([data-pdf-export="true"]) .contact {
     margin: 5pt 0 0;
     gap: 6pt;
   }
@@ -398,7 +389,7 @@ html[lang="es"] .lang-en {
     widows: 2;
   }
 
-  .languages {
+  html:not([data-pdf-export="true"]) .languages {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
@@ -414,18 +405,18 @@ html[lang="es"] .lang-en {
     margin: 14mm;
   }
 
-  body {
+  html:not([data-pdf-export="true"]) body {
     background: #fff;
   }
 
-  .page {
+  html:not([data-pdf-export="true"]) .page {
     width: auto;
     min-height: auto;
     margin: 0;
     padding: 0;
   }
 
-  .top-controls {
+  html:not([data-pdf-export="true"]) .top-controls {
     display: none;
   }
 }

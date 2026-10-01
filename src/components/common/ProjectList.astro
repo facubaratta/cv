@@ -1,7 +1,7 @@
 ---
-import BilingualText from "./BilingualText.astro";
+import type { Entry } from "../../types/resume";
 import Anchor from "./Anchor.astro";
-
+interface Props { projects: NonNullable<Entry["projects"]> }
 const { projects } = Astro.props;
 ---
 <ul class="project-list">
@@ -9,8 +9,7 @@ const { projects } = Astro.props;
     <li>
       <Anchor href={project.href}>
         <span class="subtitle">{project.name}:</span>{" "}
-        <BilingualText as="span" es={project.body.es} en={project.body.en} />
-        {" - "}
+        {project.description}{" - "}
         <span class="project-url">
           {project.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
         </span>

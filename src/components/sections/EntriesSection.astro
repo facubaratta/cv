@@ -1,0 +1,11 @@
+---
+import type { Entry, Locale } from "../../types/resume";
+import SectionTitle from "../common/SectionTitle.astro";
+import ResumeEntry from "../common/Entry.astro";
+interface Props { section: { title: string; entries: Entry[] }; locale: Locale }
+const { section, locale } = Astro.props;
+---
+<section class="experience">
+  <SectionTitle title={section.title} />
+  {section.entries.map((entry) => <ResumeEntry entry={entry} locale={locale} />)}
+</section>

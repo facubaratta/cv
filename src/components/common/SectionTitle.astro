@@ -1,7 +1,5 @@
 ---
-const { es, en } = Astro.props;
+interface Props { title: string }
+const { title } = Astro.props;
 ---
-<h2 class="section-title">
-  <span class="lang-es">{es}</span>
-  <span class="lang-en">{en}</span>
-</h2>
+<h2 class="section-title">{title}</h2>

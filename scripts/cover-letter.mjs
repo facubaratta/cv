@@ -2,7 +2,7 @@ import fs from "node:fs";
 import jspdfModule from "jspdf/dist/jspdf.node.min.js";
 
 // Standalone cover-letter subproject
-// node cover-letter.mjs
+// npm run letter
 const letter = {
   outputFile: "Facundo_Baratta_Cover_Letter.pdf",
   profile: {

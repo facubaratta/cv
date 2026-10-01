@@ -63,16 +63,16 @@ export const cvText = {
         },
         {
           left: {
-            es: "Udemy - Maximilian Schwarzmüller",
-            en: "Udemy - Maximilian Schwarzmüller",
+            es: "React - The Complete Guide",
+            en: "React - The Complete Guide",
           },
           right: {
             es: "2024",
             en: "2024",
           },
           subtitle: {
-            es: "React - The Complete Guide (incl. Next.js, Redux)",
-            en: "React - The Complete Guide (incl. Next.js, Redux)",
+            es: "Udemy - Maximilian Schwarzmüller",
+            en: "Udemy - Maximilian Schwarzmüller",
           },
           body: {
             es: "React, Next.js, Redux y testing",
@@ -82,16 +82,16 @@ export const cvText = {
         },
         {
           left: {
-            es: "DevTalles - Fernando Herrera",
-            en: "DevTalles - Fernando Herrera",
+            es: "React Native Expo",
+            en: "React Native Expo",
           },
           right: {
             es: "2024",
             en: "2024",
           },
           subtitle: {
-            es: "React Native Expo: Aplicaciones nativas para iOS y Android",
-            en: "React Native Expo: Native Apps for iOS and Android",
+            es: "DevTalles - Fernando Herrera",
+            en: "DevTalles - Fernando Herrera",
           },
           body: {
             es: "TypeScript, Expo Router, JWT y despliegue en stores",

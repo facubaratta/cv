@@ -185,6 +185,7 @@ export const cvText = {
               en: "Contributed to the development of a personalized benefits platform for Zurich Argentina customers, with offers based on their insurance policies and refreshed monthly.",
             },
             {
+              // '/Users/facu/Documents/!Archive/Creative Coefficient/grm'
               label: "GRM",
               es: "Integré el equipo de desarrollo de un sistema de gestión para un registro civil de Ecuador, con microservicios y arquitectura orientada a eventos con Kafka; trabajé en frontend y backend con React, TypeScript, Java y Spring Boot.",
               en: "Worked on the team developing a management system for a civil registry in Ecuador, using microservices and an event-driven architecture with Kafka; contributed across React/TypeScript frontend and Java/Spring Boot backend.",
@@ -206,6 +207,7 @@ export const cvText = {
           ],
           href: "https://creativecoefficient.net",
         },
+        // '/Users/facu/Documents/Health & Harmony'
         {
           left: {
             es: "Consultoría IT",

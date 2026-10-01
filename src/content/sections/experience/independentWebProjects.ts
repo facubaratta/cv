@@ -3,10 +3,10 @@ import type { Entry } from '../../../types/resume';
 const shared = {
   "period": {
     "start": {
-      "year": 2023
+      "year": 2025
     },
     "end": {
-      "year": 2024
+      "year": 2026
     }
   }
 } satisfies Partial<Entry>;
@@ -25,7 +25,7 @@ export const independentWebProjectsEn = {
       "description": "institutional website"
     },
     {
-      "name": "TimeMagnitude",
+      "name": "Time Magnitude",
       "href": "https://facubaratta.github.io/time/",
       "description": "Interactive web tool for visualizing magnitudes of time"
     }
@@ -47,7 +47,7 @@ export const independentWebProjectsEs = {
       "description": "sitio web institucional"
     },
     {
-      "name": "TimeMagnitude",
+      "name": "Time Magnitude",
       "href": "https://facubaratta.github.io/time/",
       "description": "Herramienta web interactiva para visualizar magnitudes de tiempo"
     }

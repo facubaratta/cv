@@ -5,7 +5,7 @@ export const skillsEn = {
   "items": [
     {
       "label": "Software Engineering",
-      "value": "Design principles, OOP, data structures, Git, Docker, CI/CD pipelines"
+      "value": "Design principles, Object-oriented programming, data structures, Git, Docker, CI/CD pipelines"
     },
     {
       "label": "Backend",
@@ -31,7 +31,7 @@ export const skillsEs = {
   "items": [
     {
       "label": "Ingeniería de software",
-      "value": "Principios de diseño, POO, estructuras de datos, Git, Docker, pipelines CI/CD"
+      "value": "Principios de diseño, Programación orientada a objetos, estructuras de datos, Git, Docker, pipelines CI/CD"
     },
     {
       "label": "Backend",

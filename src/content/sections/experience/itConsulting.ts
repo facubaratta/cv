@@ -25,7 +25,7 @@ export const itConsultingEn = {
       "text": "Automated cleaning, normalization, and consolidation of client and application data for CRM and spreadsheets using Python, with duplicate and conflict handling; configured and administered Salesforce."
     }
   ],
-  "title": "IT Consulting — Project-based"
+  "title": "IT Consultant — Project-based"
 } satisfies Entry;
 
 export const itConsultingEs = {
@@ -41,5 +41,5 @@ export const itConsultingEs = {
       "text": "Automaticé con Python la limpieza, normalización y consolidación de datos de clientes y solicitudes para CRM y planillas, con control de duplicados y conflictos; configuré y administré Salesforce."
     }
   ],
-  "title": "Consultoría IT — por proyectos"
+  "title": "Consultor IT — por proyectos"
 } satisfies Entry;

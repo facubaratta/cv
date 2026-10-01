@@ -99,25 +99,6 @@ export const cvText = {
           },
           href: "https://fernando-herrera.com/course/react-native-expo/",
         },
-        {
-          left: {
-            es: "DevTalles - Fernando Herrera",
-            en: "DevTalles - Fernando Herrera",
-          },
-          right: {
-            es: "2024",
-            en: "2024",
-          },
-          subtitle: {
-            es: "Mini-Curso: Visual Studio Code",
-            en: "Mini-Course: Visual Studio Code",
-          },
-          body: {
-            es: "Atajos y edición rápida",
-            en: "Shortcuts and faster editing",
-          },
-          href: "https://fernando-herrera.com/course/curso-vscode/",
-        },
       ],
     },
     skills: {

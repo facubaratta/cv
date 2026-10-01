@@ -1,19 +1,14 @@
 import fs from "node:fs";
+import { profile } from "../src/content/profile.js";
+import { linkedinUrl, buildPDFFileName } from "../src/utils/profile.js";
 import jspdfModule from "jspdf/dist/jspdf.node.min.js";
 
 // Standalone cover-letter subproject
 // npm run letter
+
 const letter = {
-  outputFile: "Facundo_Baratta_Cover_Letter.pdf",
-  profile: {
-    name: "Facundo Baratta",
-    title: "Software Engineer",
-    email: "facundo.baratta@gmail.com",
-    phone: "(+54 9) 11 3361-0131",
-    phoneHref: "https://wa.me/5491133610131",
-    location: "Buenos Aires, Argentina",
-    linkedin: "https://www.linkedin.com/in/facundo-baratta/",
-  },
+  outputFile: buildPDFFileName("Cover_Letter"),
+  profile,
   date: "today", // `"today"` prints current date. supports fixed strings i.e. `"June 2, 2026"`
   greeting: "Hello,",
   paragraphs: [
@@ -101,7 +96,7 @@ function addHeader(doc, profile) {
 }
 
 function addContactFooter(doc, profile) {
-  const linkedinLabel = profile.linkedin.replace(/^https:\/\/(www\.)?/, "");
+  const linkedinLabel = linkedinUrl.replace(/^https:\/\/(www\.)?/, "");
   const centerX = page.width / 2;
   const y = page.height - 14.5;
 
@@ -118,8 +113,8 @@ function addContactFooter(doc, profile) {
   const phoneX = contactX + doc.getTextWidth(phonePrefix);
 
   doc.text(contact, centerX, y, { align: "center" });
-  doc.link(linkedinX, y - 3.2, doc.getTextWidth(linkedinLabel), 4.4, { url: profile.linkedin });
-  doc.link(phoneX, y - 3.2, doc.getTextWidth(profile.phone), 4.4, { url: profile.phoneHref });
+  doc.link(linkedinX, y - 3.2, doc.getTextWidth(linkedinLabel), 4.4, { url: linkedinUrl });
+  doc.link(phoneX, y - 3.2, doc.getTextWidth(profile.phone), 4.4, { url: profile.whatsAppLink });
 }
 
 function buildPdf() {

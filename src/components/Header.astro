@@ -1,24 +1,15 @@
 ---
 import Anchor from "./common/Anchor.astro";
-
-const name = "FACUNDO BARATTA";
-const email = "facundo.baratta@gmail.com";
-const linkedinUsername = "facundo-baratta";
-const phone = {
-  href: "https://wa.me/5491133610131",
-  label: "(+54 9) 11 3361-0131",
-};
-
-const linkedinUrl = `https://www.linkedin.com/in/${linkedinUsername}/`;
+import { profile } from "../content/profile.js";
+import { linkedinUrl } from "../utils/profile.js";
+const linkedinUsername = profile.linkedinUsername.split("/").filter(Boolean).at(-1);
 ---
 <header>
-  <h1>
-    <Anchor href={linkedinUrl}>{name}</Anchor>
-  </h1>
+  <h1><Anchor href={linkedinUrl}>{profile.name.toUpperCase()}</Anchor></h1>
   <p class="contact">
-    <Anchor href={`mailto:${email}`}>{email}</Anchor>
+    <Anchor href={`mailto:${profile.email}`}>{profile.email}</Anchor>
     <span class="contact-separator" aria-hidden="true">|</span>
-    <Anchor href={phone.href}>{phone.label}</Anchor>
+    <Anchor href={profile.whatsAppLink}>{profile.phone}</Anchor>
     <span class="contact-separator" aria-hidden="true">|</span>
     <Anchor href={linkedinUrl}>in/{linkedinUsername}</Anchor>
   </p>

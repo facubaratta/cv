@@ -241,6 +241,15 @@ button:focus-visible {
   gap: 8px;
 }
 
+.experience-bullets {
+  margin: 3px 0 0;
+  padding-left: 1.2em;
+}
+
+.experience-bullets li + li {
+  margin-top: 0.25em;
+}
+
 .experience .entry + .entry {
   margin-top: 1em;
 }

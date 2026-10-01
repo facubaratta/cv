@@ -22,6 +22,7 @@ function ExperienceSection() {
           bodyEn={entry.body?.en}
           href={entry.href}
           projects={entry.projects}
+          bullets={entry.bullets}
         />
       ))}
     </section>

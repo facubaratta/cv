@@ -1,6 +1,6 @@
-import BilingualText from "./BilingualText";
 import EntryHeader from "./EntryHeader";
-import Anchor from "./Anchor";
+import EntryDetails from "./EntryDetails";
+import EntryFrame from "./EntryFrame";
 import ProjectList from "./ProjectList";
 
 function Entry({
@@ -14,52 +14,28 @@ function Entry({
   bodyEn,
   href,
   projects,
+  bullets,
 }) {
-  if (projects) {
-    return (
-      <div className="entry project-entry">
-        <div className="entry-content">
-          <EntryHeader
-            leftEs={leftEs}
-            rightEs={rightEs}
-            leftEn={leftEn}
-            rightEn={rightEn}
-          />
-          <ProjectList projects={projects} />
-        </div>
-      </div>
-    );
-  }
-
-  const content = (
-    <>
+  return (
+    <EntryFrame href={projects ? undefined : href} isProjectEntry={Boolean(projects)}>
       <EntryHeader
         leftEs={leftEs}
         rightEs={rightEs}
         leftEn={leftEn}
         rightEn={rightEn}
       />
-      <BilingualText
-        as="span"
-        className="subtitle"
-        es={subtitleEs}
-        en={subtitleEn}
-      />
-      <br />
-      <BilingualText as="span" es={bodyEs} en={bodyEn} />
-    </>
-  );
-
-  return (
-    <p className="entry">
-      {href ? (
-        <Anchor href={href}>
-          {content}
-        </Anchor>
+      {projects ? (
+        <ProjectList projects={projects} />
       ) : (
-        <span className="entry-content">{content}</span>
+        <EntryDetails
+          subtitleEs={subtitleEs}
+          subtitleEn={subtitleEn}
+          bodyEs={bodyEs}
+          bodyEn={bodyEn}
+          bullets={bullets}
+        />
       )}
-    </p>
+    </EntryFrame>
   );
 }
 

@@ -1,5 +1,4 @@
 import type { Resume } from '../../types/resume';
-import en from '../en';
 
 const level = "C2"
 const synergyLanguages = {

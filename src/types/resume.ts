@@ -39,5 +39,5 @@ export interface Resume {
   education: { title: string; entries: Entry[] };
   skills: { title: string; items: { label: string; value: string }[] };
   experience: { title: string; entries: Entry[] };
-  languages: { title: string; items: { name: string; detail: string; link?: Link }[] };
+  languages: { title: string; items: { name: string; detail: string; synergy?: Link }[] };
 }

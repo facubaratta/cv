@@ -11,7 +11,7 @@ const { section } = Astro.props;
     {section.items.map((item) => (
       <li class="language-item">
         <strong>{item.name}</strong>{" "}
-        <em>{item.detail}{item.link && <> <Anchor href={item.link.href}>{item.link.label}</Anchor></>}</em>
+        <em>{item.detail}{item.synergy && <> <Anchor href={item.synergy.href}>{item.synergy.label}</Anchor></>}</em>
       </li>
     ))}
   </ul>

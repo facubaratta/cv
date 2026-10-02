@@ -6,5 +6,5 @@ export const profile = {
   phone: "(+54 9) 11 3361-0131",
   whatsAppLink: "https://wa.me/5491133610131",
   location: "Buenos Aires, Argentina",
-  linkedinUsername: "facundo-baratta/",
+  linkedinUsername: "facundo-baratta",
 };

@@ -3,20 +3,14 @@ import { profile } from "../profile";
 
 const name = profile.name;
 
-type DocumentContent = Pick<Resume, "description" | "controls">;
+type DocumentContent = Pick<Resume, "description" | "download">;
 
 export const documentEn = {
   description: `Developer CV for ${name}, including education, technical skills, and work experience.`,
-  controls: {
-    note: "Entries are links",
-    download: "Download PDF",
-  },
+  download: "Download PDF",
 } satisfies DocumentContent;
 
 export const documentEs = {
   description: `Currículum de ${name}: educación, habilidades técnicas y experiencia laboral.`,
-  controls: {
-    note: "Las entradas son enlaces",
-    download: "Descargar PDF",
-  },
+  download: "Descargar PDF",
 } satisfies DocumentContent;

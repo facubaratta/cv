@@ -35,7 +35,7 @@ export interface Entry {
 export interface Resume {
   locale: Locale;
   description: string;
-  controls: { note: string; download: string };
+  download: string;
   education: { title: string; entries: Entry[] };
   skills: { title: string; items: { label: string; value: string }[] };
   experience: { title: string; entries: Entry[] };

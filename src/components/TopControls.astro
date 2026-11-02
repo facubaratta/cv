@@ -2,19 +2,27 @@
 import type { Resume } from "../types/resume";
 import { locales } from "../utils/locales.js";
 import { basePath } from "../utils/paths.js";
-interface Props { resume: Resume }
+interface Props {
+  resume: Resume;
+}
 const { resume } = Astro.props;
 const base = basePath(import.meta.env.BASE_URL);
 const current = locales[resume.locale];
 const alternateLocale = resume.locale === "en" ? "es" : "en";
 const alternate = locales[alternateLocale];
 ---
-<nav class="top-controls" aria-label={resume.locale === "en" ? "CV controls" : "Opciones del CV"}>
-  <p class="interactive-note">
-    <span aria-hidden="true">🔗 </span>{resume.controls.note}
-  </p>
-  <div class="top-controls-actions">
-    <a class="pdf-btn" href={`${base}${current.pdf}`} download={current.pdf}>{resume.controls.download}</a>
-    <a class="lang-toggle" href={`${base}${alternate.path}`} hreflang={alternateLocale} lang={alternateLocale}>{alternate.label}</a>
-  </div>
+
+<nav
+  class="top-controls"
+  aria-label={resume.locale === "en" ? "CV controls" : "Opciones del CV"}
+>
+  <a class="pdf-btn" href={`${base}${current.pdf}`} download={current.pdf}
+    >{resume.download}</a
+  >
+  <a
+    class="lang-toggle"
+    href={`${base}${alternate.path}`}
+    hreflang={alternateLocale}
+    lang={alternateLocale}>{alternate.label}</a
+  >
 </nav>
